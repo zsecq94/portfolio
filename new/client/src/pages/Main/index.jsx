@@ -3,8 +3,10 @@ import "./Main.scss";
 
 const Main = () => {
   return (
-    <div>
-      <h2>Main입니다.</h2>
+    <div className="Main-wrapper">
+      <div className="Main-content">
+        <h2>hi입니다</h2>
+      </div>
     </div>
   );
 };
