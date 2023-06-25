@@ -61,7 +61,7 @@ const Container = styled.div`
     align-items: center;
     margin: 0 25%;
     h3 {
-      color: #d3d3d3;
+      color: #696969;
       cursor: pointer;
       transition: 0.5s ease-in-out;
       &:hover {
