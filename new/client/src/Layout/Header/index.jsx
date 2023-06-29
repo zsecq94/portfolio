@@ -10,7 +10,7 @@ const Header = ({ goToSlide, activeIndex }) => {
             onClick={() => goToSlide(0)}
             className={activeIndex === 0 ? "Title-selected" : "Title"}
           >
-            JK-zone
+            JK-ZONE
           </h3>
         </div>
         <div className="Header-menu">

@@ -20,3 +20,17 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+input,
+button,
+textarea {
+  border: none;
+}
