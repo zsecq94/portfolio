@@ -59,7 +59,7 @@ const Skills = () => {
             <div style={{ display: "flex", gap: "0.5rem" }}>
               <SkillItem style={{ width: "50%" }}>
                 <SkillImage src="images/mui.png" alt="#" />
-                <SkillOverlay>⭐⭐</SkillOverlay>
+                <SkillOverlay>⭐⭐⭐</SkillOverlay>
               </SkillItem>
               <SkillItem style={{ width: "50%" }}>
                 <SkillImage src="images/coreui.png" alt="#" />

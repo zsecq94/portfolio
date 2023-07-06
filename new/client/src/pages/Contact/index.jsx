@@ -1,10 +1,20 @@
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import styled from "styled-components";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 import "./Contact.scss";
 
 const Contact = () => {
+  const toastOptions = {
+    position: "top-right",
+    autoClose: 2000,
+    pauseOnHover: true,
+    draggable: true,
+    theme: "dark",
+    icon: "👏",
+  };
   const form = useRef();
   const sendEmail = (e) => {
     e.preventDefault();
@@ -13,7 +23,7 @@ const Contact = () => {
       form.current[1].value.length < 1 ||
       form.current[2].value.length < 1
     ) {
-      alert("모든 항목을 작성해주세요");
+      toast.error("모든 항목을 작성해주세요", toastOptions);
       return;
     } else {
       emailjs
@@ -25,7 +35,10 @@ const Contact = () => {
         )
         .then(
           (result) => {
-            alert("메일이 성공적으로 보내졌습니다.");
+            toast.success("메일이 보내기 성공!", toastOptions);
+            form.current[0].value = "";
+            form.current[1].value = "";
+            form.current[2].value = "";
           },
           (error) => {
             console.log(error.text);
@@ -33,9 +46,11 @@ const Contact = () => {
         );
     }
   };
+
   return (
     <div>
       <Container>
+        <ToastContainer className="toast-container" />
         <div style={{ marginTop: "70px" }}>
           <h2>✔ CONTACT</h2>
           <hr />
@@ -69,6 +84,7 @@ const Contact = () => {
           </div>
         </div>
       </Container>
+
       <Footer>
         <a href="https://github.com/zsecq94" target="_blank" rel="noreferrer">
           <img src="images/giticon.png" alt="" style={{ width: "50px" }} />
@@ -90,7 +106,6 @@ const Container = styled.div`
   color: white;
   width: 100%;
   height: 85vh;
-
   .contact-wrapper {
     form {
       display: flex;
@@ -114,6 +129,7 @@ const Container = styled.div`
         border-radius: 5px;
         height: 60px;
         box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.5);
+        cursor: pointer;
         &:hover {
           color: white;
           background-color: orange;
