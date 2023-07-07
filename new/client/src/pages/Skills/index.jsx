@@ -12,8 +12,15 @@ const Skills = () => {
           textAlign: "center",
         }}
       >
-        <h2 style={{ color: "white" }}>✔ SKILLS</h2>
-        <hr />
+        <h2
+          style={{
+            color: "white",
+            textDecoration: "underline",
+            textUnderlineOffset: "10px",
+          }}
+        >
+          ✔ SKILLS
+        </h2>
         <h5 style={{ marginTop: "1rem", color: "gray" }}>
           ⭐ : 프로젝트 수행 횟수
         </h5>
@@ -146,7 +153,7 @@ const Skills = () => {
             </div>
           </div>
           <div className="two">
-            <h4 style={{ fontSize: "1.2rem" }}>Communication</h4>
+            <h4>Communication</h4>
             <hr />
             <div
               style={{
@@ -177,7 +184,7 @@ const Skills = () => {
         </div>
         <div className="skills-two">
           <div className="two">
-            <h4 style={{ fontSize: "1.2rem" }}>Version Control</h4>
+            <h4>Version Control</h4>
             <hr />
             <div
               style={{

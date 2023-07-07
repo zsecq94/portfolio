@@ -10,11 +10,14 @@ const About = () => {
         style={{
           marginTop: "70px",
           textAlign: "center",
+          textDecoration: "underline",
+          textUnderlineOffset: "10px",
         }}
       >
-        <h2 style={{ color: "white" }}>✔ ABOUT ME</h2>
-        <hr />
+        <h2>✔ ABOUT ME</h2>
       </div>
+      <img src="" alt="" />
+      <div className="about-wrapper"></div>
     </Container>
   );
 };
@@ -25,8 +28,9 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #219ebc;
+  background-color: #aee2ff;
   width: 100%;
   height: 100%;
   gap: 1rem;
+  color: white;
 `;

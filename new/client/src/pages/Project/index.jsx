@@ -12,8 +12,15 @@ const Project = () => {
           textAlign: "center",
         }}
       >
-        <h2 style={{ color: "white" }}>✔ PROJECT</h2>
-        <hr />
+        <h2
+          style={{
+            color: "white",
+            textDecoration: "underline",
+            textUnderlineOffset: "10px",
+          }}
+        >
+          ✔ PROJECT
+        </h2>
       </div>
     </Container>
   );

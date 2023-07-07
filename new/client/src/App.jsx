@@ -1,10 +1,10 @@
 import React, { useState, useRef, useEffect } from "react";
 import Header from "./Layout/Header";
-import Main from "./pages/Main";
-import About from "./pages/About";
-import Skills from "./pages/Skills";
-import Project from "./pages/Project";
-import Contact from "./pages/Contact";
+import Main from "./Pages/Main";
+import About from "./Pages/About";
+import Skills from "./Pages/Skills";
+import Project from "./Pages/Project";
+import Contact from "./Pages/Contact";
 import TypingEffect from "./Components/TypingEffect";
 import styled from "styled-components";
 

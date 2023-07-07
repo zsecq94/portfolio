@@ -23,7 +23,7 @@ const Contact = () => {
       form.current[1].value.length < 1 ||
       form.current[2].value.length < 1
     ) {
-      toast.error("모든 항목을 작성해주세요", toastOptions);
+      toast.error("모든 항목을 작성해주세요!", toastOptions);
       return;
     } else {
       emailjs
@@ -51,10 +51,14 @@ const Contact = () => {
     <div>
       <Container>
         <ToastContainer className="toast-container" />
-        <div style={{ marginTop: "70px" }}>
+        <div
+          style={{
+            marginTop: "70px",
+            textDecoration: "underline",
+            textUnderlineOffset: "10px",
+          }}
+        >
           <h2>✔ CONTACT</h2>
-          <hr />
-          <br />
         </div>
         <div style={{ display: "flex", gap: "2rem", marginTop: "50px" }}>
           <img
