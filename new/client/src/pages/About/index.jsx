@@ -17,7 +17,26 @@ const About = () => {
         <h2>✔ ABOUT ME</h2>
       </div>
       <img src="" alt="" />
-      <div className="about-wrapper"></div>
+      <div className="about-wrapper">
+        <div className="name">
+          <h4>이름</h4>
+        </div>
+        <div className="age">
+          <h4>나이</h4>
+        </div>
+        <div className="address">
+          <h4>주소지</h4>
+        </div>
+        <div className="contact">
+          <h4>연락처</h4>
+        </div>
+        <div className="email">
+          <h4>이메일</h4>
+        </div>
+        <div className="Education">
+          <h4>학력</h4>
+        </div>
+      </div>
     </Container>
   );
 };
@@ -33,4 +52,8 @@ const Container = styled.div`
   height: 100%;
   gap: 1rem;
   color: white;
+  .about-wrapper {
+    display: flex;
+    gap: 7rem;
+  }
 `;
