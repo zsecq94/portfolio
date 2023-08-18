@@ -53,7 +53,7 @@ const Contact = () => {
         <ToastContainer className="toast-container" />
         <div
           style={{
-            marginTop: "70px",
+            marginTop: "55px",
             textDecoration: "underline",
             textUnderlineOffset: "10px",
           }}
@@ -77,11 +77,11 @@ const Contact = () => {
                 <input
                   type="number"
                   name="user_phone"
-                  placeholder=" 전화번호"
+                  placeholder=" 전화번호( -제외 )"
                 />
                 <textarea name="message" placeholder=" 메세지" />
                 <button className="btn1" onClick={sendEmail}>
-                  SEND
+                  메일 보내기
                 </button>
               </form>
             </div>
@@ -120,6 +120,11 @@ const Container = styled.div`
         height: 40px;
         border-radius: 5px;
         box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.5);
+      }
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
       }
       textarea {
         height: 200px;

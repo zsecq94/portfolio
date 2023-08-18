@@ -8,7 +8,7 @@ const About = () => {
     <Container>
       <div
         style={{
-          marginTop: "70px",
+          marginTop: "55px",
           textAlign: "center",
           textDecoration: "underline",
           textUnderlineOffset: "10px",
@@ -22,7 +22,7 @@ const About = () => {
           <h4>https://jk-zone.firebaseapp.com/</h4>
         </div>
         <div className="about-main">
-          <h4>프론트엔드 개발자</h4>
+          <h4>신입 프론트엔드 개발자</h4>
           <h3>배 중 권 / 94.10.03</h3>
           <h4>zsecq94@gmail.com / 010-2556-8761 / 전라남도 나주시</h4>
           <h4>삼성 청년 SW 아카데미 8기 수료</h4>
@@ -30,7 +30,7 @@ const About = () => {
       </div>
       <div className="about-wrapper2">
         <h2>JK-ZONE</h2>
-        <h3>사용자 친화적 / 디테일 / 열정</h3>
+        <h3>사용자 친화적 / 디테일 / 열정 / 소통</h3>
       </div>
     </Container>
   );
@@ -58,7 +58,7 @@ const Container = styled.div`
     background-repeat: no-repeat;
     width: 30%;
     height: 30%;
-    box-shadow: 3px 3px 3px;
+    box-shadow: 3px 3px 10px;
     padding: 20px 40px;
     justify-content: space-between;
     h4 {
@@ -82,7 +82,7 @@ const Container = styled.div`
     background-color: white;
     width: 30%;
     height: 30%;
-    box-shadow: 3px 3px 3px;
+    box-shadow: 3px 3px 10px;
     padding: 20px 40px;
     justify-content: center;
     align-items: center;

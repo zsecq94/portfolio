@@ -8,7 +8,7 @@ const Skills = () => {
     <Container>
       <div
         style={{
-          marginTop: "70px",
+          marginTop: "55px",
           textAlign: "center",
         }}
       >
@@ -237,7 +237,7 @@ const Container = styled.div`
       padding: 1rem;
       background-color: white;
       border-radius: 10px;
-      box-shadow: 5px 5px 5px;
+      box-shadow: 3px 3px 10px;
       width: 12%;
     }
     .skills-two {
@@ -249,7 +249,7 @@ const Container = styled.div`
         padding: 1rem;
         background-color: white;
         border-radius: 10px;
-        box-shadow: 5px 5px 5px;
+        box-shadow: 3px 3px 10px;
       }
     }
   }

@@ -44,7 +44,7 @@ function App() {
         </Container>
       )}
       {mainCheck && (
-        <div className="App-wrapper" onWheel={(e) => e.preventDefault()}>
+        <div className="App-wrapper">
           <Header goToSlide={goToSlide} activeIndex={activeIndex} />
           <Swiper
             ref={swiperRef}

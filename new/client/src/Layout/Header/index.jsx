@@ -30,7 +30,7 @@ const Header = ({ goToSlide, activeIndex }) => {
             onClick={() => goToSlide(3)}
             className={activeIndex === 3 && "Menu-selected"}
           >
-            Project
+            Projects
           </h3>
           <h3
             onClick={() => goToSlide(4)}
