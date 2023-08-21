@@ -1,7 +1,11 @@
 import React, { useRef, useState } from "react";
 import styled from "styled-components";
+import Project1 from "../../Components/ProjectComponents/Project1";
+import Project2 from "../../Components/ProjectComponents/Project2";
+import Project3 from "../../Components/ProjectComponents/Project3";
+import Project4 from "../../Components/ProjectComponents/Project4";
+import Project5 from "../../Components/ProjectComponents/Project5";
 
-import data from "./data.json";
 import "./Project.scss";
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -26,19 +30,32 @@ const Project = () => {
       >
         <h2>✔ PROJECTS</h2>
       </div>
-      <div style={{ height: "50%", width: "60%" }}>
-        <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
-          <SwiperSlide>Slide 1</SwiperSlide>
-          <SwiperSlide>Slide 2</SwiperSlide>
-          <SwiperSlide>Slide 3</SwiperSlide>
-          <SwiperSlide>Slide 4</SwiperSlide>
-          <SwiperSlide>Slide 5</SwiperSlide>
-          <SwiperSlide>Slide 6</SwiperSlide>
-          <SwiperSlide>Slide 7</SwiperSlide>
-          <SwiperSlide>Slide 8</SwiperSlide>
-          <SwiperSlide>Slide 9</SwiperSlide>
-        </Swiper>
-      </div>
+      <Swiper
+        navigation={true}
+        modules={[Navigation]}
+        className="mySwiper"
+        style={{
+          width: "70%",
+          height: "80%",
+          borderRadius: "20px",
+        }}
+      >
+        <SwiperSlide>
+          <Project1 />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Project2 />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Project3 />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Project4 />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Project5 />
+        </SwiperSlide>
+      </Swiper>
     </Container>
   );
 };
