@@ -219,7 +219,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #023047;
+  background-color: #2b2b2b;
   width: 100%;
   height: 100%;
   gap: 1rem;
@@ -237,7 +237,6 @@ const Container = styled.div`
       padding: 1rem;
       background-color: white;
       border-radius: 10px;
-      box-shadow: 3px 3px 10px;
       width: 12%;
     }
     .skills-two {
@@ -249,7 +248,6 @@ const Container = styled.div`
         padding: 1rem;
         background-color: white;
         border-radius: 10px;
-        box-shadow: 3px 3px 10px;
       }
     }
   }

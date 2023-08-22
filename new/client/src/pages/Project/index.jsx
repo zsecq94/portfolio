@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React from "react";
 import styled from "styled-components";
 import Project1 from "../../Components/ProjectComponents/Project1";
 import Project2 from "../../Components/ProjectComponents/Project2";
@@ -35,7 +35,7 @@ const Project = () => {
         modules={[Navigation]}
         className="mySwiper"
         style={{
-          width: "70%",
+          width: "55%",
           height: "80%",
           borderRadius: "20px",
         }}
@@ -61,12 +61,11 @@ const Project = () => {
 };
 
 export default Project;
-
 const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #ffb703;
+  background-color: #212121;
   width: 100%;
   height: 100%;
   gap: 1rem;

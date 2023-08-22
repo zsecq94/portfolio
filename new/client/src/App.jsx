@@ -1,11 +1,10 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef } from "react";
 import Header from "./Layout/Header";
 import Main from "./Pages/Main";
 import About from "./Pages/About";
 import Skills from "./Pages/Skills";
 import Project from "./Pages/Project";
 import Contact from "./Pages/Contact";
-import TypingEffect from "./Components/TypingEffect";
 import styled from "styled-components";
 
 import "./App.scss";
@@ -18,7 +17,7 @@ import "swiper/css/pagination";
 function App() {
   const [activeIndex, setActiveIndex] = useState(0);
   const swiperRef = useRef(null);
-  const [mainCheck, setMainCheck] = useState(true);
+  const [mainCheck, setMainCheck] = useState(false);
 
   const handleSlideChange = (swiper) => {
     setActiveIndex(swiper.activeIndex);
@@ -30,17 +29,11 @@ function App() {
     }
   };
 
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     setMainCheck(true);
-  //   }, 4000);
-  // }, []);
-
   return (
     <div>
       {!mainCheck && (
         <Container>
-          <TypingEffect />
+          <Main setMainCheck={setMainCheck} />
         </Container>
       )}
       {mainCheck && (
@@ -63,9 +56,6 @@ function App() {
               sensitivity: 1,
             }}
           >
-            <SwiperSlide>
-              <Main />
-            </SwiperSlide>
             <SwiperSlide>
               <About />
             </SwiperSlide>

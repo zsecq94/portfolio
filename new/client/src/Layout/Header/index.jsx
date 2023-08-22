@@ -6,35 +6,32 @@ const Header = ({ goToSlide, activeIndex }) => {
     <Container>
       <div className="Header-wrapper">
         <div className="Header-title">
-          <h3
-            onClick={() => goToSlide(0)}
-            className={activeIndex === 0 ? "Title-selected" : "Title"}
-          >
+          <h3 onClick={() => window.location.reload()} className="Title">
             JK-ZONE
           </h3>
         </div>
         <div className="Header-menu">
           <h3
+            onClick={() => goToSlide(0)}
+            className={activeIndex === 0 && "Menu-selected"}
+          >
+            About me
+          </h3>
+          <h3
             onClick={() => goToSlide(1)}
             className={activeIndex === 1 && "Menu-selected"}
           >
-            About me
+            Skills
           </h3>
           <h3
             onClick={() => goToSlide(2)}
             className={activeIndex === 2 && "Menu-selected"}
           >
-            Skills
+            Projects
           </h3>
           <h3
             onClick={() => goToSlide(3)}
             className={activeIndex === 3 && "Menu-selected"}
-          >
-            Projects
-          </h3>
-          <h3
-            onClick={() => goToSlide(4)}
-            className={activeIndex === 4 && "Menu-selected"}
           >
             Contact
           </h3>
@@ -71,10 +68,10 @@ const Container = styled.div`
     .Header-title {
       .Title {
         font-size: 2rem;
-      }
-      .Title-selected {
-        color: white;
-        font-size: 2rem;
+        &:hover {
+          color: white;
+          font-size: 2rem;
+        }
       }
     }
     .Header-menu {

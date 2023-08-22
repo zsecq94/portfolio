@@ -104,7 +104,7 @@ export default Contact;
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  background-color: #ffcc99;
+  background-color: #2b2b2b;
   align-items: center;
   text-align: center;
   color: white;
@@ -119,7 +119,6 @@ const Container = styled.div`
         width: 400px;
         height: 40px;
         border-radius: 5px;
-        box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.5);
       }
       input::-webkit-outer-spin-button,
       input::-webkit-inner-spin-button {
@@ -129,7 +128,6 @@ const Container = styled.div`
       textarea {
         height: 200px;
         border-radius: 5px;
-        box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.5);
       }
       .btn1 {
         color: black;
@@ -137,11 +135,11 @@ const Container = styled.div`
         transition: 0.5s ease-in-out;
         border-radius: 5px;
         height: 60px;
-        box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.5);
+        font-weight: bold;
         cursor: pointer;
         &:hover {
           color: white;
-          background-color: orange;
+          background-color: #212121;
         }
       }
     }
