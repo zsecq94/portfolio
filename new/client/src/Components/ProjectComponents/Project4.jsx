@@ -26,7 +26,7 @@ const Project4 = () => {
     } else {
       setImgName("Search & Bookmark");
     }
-  }, []);
+  }, [mainImgUrl]);
 
   const changeImg = (imgUrl) => {
     setMainImgUrl(imgUrl);

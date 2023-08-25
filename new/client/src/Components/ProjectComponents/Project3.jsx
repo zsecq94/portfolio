@@ -18,15 +18,15 @@ const Project3 = () => {
     if (mainImgUrl === imgUrls[0]) {
       setImgName("Main");
     } else if (mainImgUrl === imgUrls[1]) {
-      setImgName("게시판");
+      setImgName("Article");
     } else if (mainImgUrl === imgUrls[2]) {
-      setImgName("진단하기");
+      setImgName("PC Check");
     } else if (mainImgUrl === imgUrls[3]) {
-      setImgName("화장하기");
+      setImgName("Makeup");
     } else {
-      setImgName("내 프로필");
+      setImgName("Profile");
     }
-  }, []);
+  }, [mainImgUrl]);
 
   const changeImg = (imgUrl) => {
     setMainImgUrl(imgUrl);

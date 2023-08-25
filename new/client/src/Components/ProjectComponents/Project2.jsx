@@ -26,7 +26,7 @@ const Project2 = () => {
     } else {
       setImgName("Reporter");
     }
-  }, []);
+  }, [mainImgUrl]);
 
   const changeImg = (imgUrl) => {
     setMainImgUrl(imgUrl);
@@ -98,11 +98,10 @@ const Project2 = () => {
         <div className="main">
           <div style={{ display: "flex" }}>
             <span>
-              T:LENS는 키워드를 통해 실시간 트렌드를 쉽게 파악하고 싶은 사용자와
-              기자별 맞춤형 구독 서비스가 필요한 사용자를 위한{" "}
               <span style={{ fontWeight: "bold" }}>
-                실시간 크롤링 및 분산 처리를 통해 뉴스 트렌드를 종합하고
-                시각화하는 서비스입니다.
+                T:LENS는 실시간 크롤링 및 분산 처리를 통해 다양한 뉴스 데이터를
+                수집하고, 이를 종합하여 트렌드를 파악하고 시각화하는 뉴스 트렌드
+                분석 서비스입니다.
               </span>
             </span>
           </div>
