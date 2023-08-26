@@ -35,5 +35,7 @@ const Container = styled.div`
   gap: 2rem;
   color: white;
   .about-wrapper {
+    display: flex;
+    justify-content: center;
   }
 `;

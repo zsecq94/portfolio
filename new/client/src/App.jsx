@@ -17,9 +17,9 @@ import "swiper/css/pagination";
 function App() {
   const [activeIndex, setActiveIndex] = useState(0);
   const swiperRef = useRef(null);
-  const [mainCheck, setMainCheck] = useState(false);
+  const [mainCheck, setMainCheck] = useState(true);
 
-  const handleSlideChange = (swiper) => {
+  const handleHeaderChange = (swiper) => {
     setActiveIndex(swiper.activeIndex);
   };
 
@@ -49,7 +49,7 @@ function App() {
             modules={[Pagination, Mousewheel]}
             slidesPerView={1}
             style={{ height: "100vh" }}
-            onSlideChange={handleSlideChange}
+            onSlideChange={handleHeaderChange}
             mousewheel={{
               invert: false,
               forceToAxis: true,
@@ -63,7 +63,7 @@ function App() {
               <Skills />
             </SwiperSlide>
             <SwiperSlide>
-              <Project />
+              <Project swiperRef={swiperRef} />
             </SwiperSlide>
             <SwiperSlide>
               <Contact />

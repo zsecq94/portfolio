@@ -15,9 +15,9 @@ import "swiper/css";
 import "swiper/css/navigation";
 
 // import required modules
-import { Navigation } from "swiper";
+import { Navigation, Pagination } from "swiper";
 
-const Project = () => {
+const Project = ({ swiperRef }) => {
   return (
     <Container>
       <div
@@ -32,8 +32,11 @@ const Project = () => {
       </div>
       <Swiper
         navigation={true}
-        modules={[Navigation]}
-        className="mySwiper"
+        speed={1500}
+        modules={[Navigation, Pagination]}
+        pagination={{
+          clickable: true,
+        }}
         style={{
           width: "55%",
           height: "80%",
@@ -41,19 +44,19 @@ const Project = () => {
         }}
       >
         <SwiperSlide>
-          <Project1 />
+          <Project1 swiperRef={swiperRef} />
         </SwiperSlide>
         <SwiperSlide>
-          <Project2 />
+          <Project2 swiperRef={swiperRef} />
         </SwiperSlide>
         <SwiperSlide>
-          <Project3 />
+          <Project3 swiperRef={swiperRef} />
         </SwiperSlide>
         <SwiperSlide>
-          <Project4 />
+          <Project4 swiperRef={swiperRef} />
         </SwiperSlide>
         <SwiperSlide>
-          <Project5 />
+          <Project5 swiperRef={swiperRef} />
         </SwiperSlide>
       </Swiper>
     </Container>

@@ -3,13 +3,13 @@ import styled from "styled-components";
 
 const Project5 = () => {
   const [mainImgUrl, setMainImgUrl] = useState(
-    "/images/projects/pjt5/main.png"
+    "/images/projects/pjt5/skills.png"
   );
   const [imgName, setImgName] = useState("");
   const imgUrls = [
-    "/images/projects/pjt5/main.png",
-    "/images/projects/pjt5/search1.png",
-    "/images/projects/pjt5/search2.png",
+    "/images/projects/pjt5/skills.png",
+    "/images/projects/pjt5/projects.png",
+    "/images/projects/pjt5/contact.png",
   ];
 
   useEffect(() => {
@@ -32,7 +32,7 @@ const Project5 = () => {
 
   return (
     <Container>
-      <h1>Crawling</h1>
+      <h2>Portfolio</h2>
       <h5 style={{ color: "gray" }}>2023.03.13(1일)</h5>
       <hr style={{ margin: "1% 4% 0% 4%" }} />
       <div style={{ display: "flex" }}>
