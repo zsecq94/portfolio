@@ -37,7 +37,7 @@ function App() {
         </Container>
       )}
       {mainCheck && (
-        <div className="App-wrapper">
+        <>
           <Header goToSlide={goToSlide} activeIndex={activeIndex} />
           <Swiper
             ref={swiperRef}
@@ -45,6 +45,7 @@ function App() {
             direction={"vertical"}
             pagination={{
               clickable: true,
+              dynamicBullets: true,
             }}
             modules={[Pagination, Mousewheel]}
             slidesPerView={1}
@@ -69,7 +70,7 @@ function App() {
               <Contact />
             </SwiperSlide>
           </Swiper>
-        </div>
+        </>
       )}
     </div>
   );

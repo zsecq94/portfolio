@@ -15,7 +15,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 
 // import required modules
-import { Navigation, Pagination } from "swiper";
+import { Navigation } from "swiper";
 
 const Project = ({ swiperRef }) => {
   return (
@@ -31,16 +31,16 @@ const Project = ({ swiperRef }) => {
         <h2>✔ PROJECTS</h2>
       </div>
       <Swiper
-        navigation={true}
-        speed={1500}
-        modules={[Navigation, Pagination]}
-        pagination={{
-          clickable: true,
+        navigation={{
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
         }}
+        speed={1000}
+        modules={[Navigation]}
         style={{
           width: "55%",
           height: "80%",
-          borderRadius: "20px",
+          borderRadius: "10px",
         }}
       >
         <SwiperSlide>
@@ -58,6 +58,8 @@ const Project = ({ swiperRef }) => {
         <SwiperSlide>
           <Project5 swiperRef={swiperRef} />
         </SwiperSlide>
+        <div className="swiper-button-next"></div>
+        <div className="swiper-button-prev"></div>
       </Swiper>
     </Container>
   );
@@ -73,4 +75,13 @@ const Container = styled.div`
   height: 100%;
   gap: 1rem;
   color: white;
+  .swiper-button-next,
+  .swiper-button-prev {
+    font-weight: bold;
+    color: gray;
+    transition: 0.3s ease-in-out;
+    &:hover {
+      color: black;
+    }
+  }
 `;

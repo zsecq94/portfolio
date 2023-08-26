@@ -34,7 +34,7 @@ const Project5 = () => {
     <Container>
       <h2>Portfolio</h2>
       <h5 style={{ color: "gray" }}>2023.03.13(1일)</h5>
-      <hr style={{ margin: "1% 4% 0% 4%" }} />
+      <hr style={{ margin: "1% 5% 0% 4%" }} />
       <div style={{ display: "flex" }}>
         <div className="img-wrapper">
           <img src={mainImgUrl} alt="#" />

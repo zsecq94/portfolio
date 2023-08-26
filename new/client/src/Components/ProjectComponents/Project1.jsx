@@ -44,7 +44,7 @@ const Project1 = ({ swiperRef }) => {
     <Container onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
       <h2>BRUEMI</h2>
       <h5 style={{ color: "gray" }}>23.05.08 ~ 23.05.26(3주)</h5>
-      <hr style={{ margin: "1% 4% 0% 4%" }} />
+      <hr style={{ margin: "1% 5% 0% 4%" }} />
       <div className="pjt1-wrapper">
         <div className="img-wrapper">
           <img src={mainImgUrl} alt="#" />
@@ -302,7 +302,7 @@ const Container = styled.div`
       height: 100%;
       padding: 2% 1% 2% 2%;
       text-align: left;
-      margin-right: 4.5%;
+      margin-right: 5%;
       overflow: auto;
       h5 {
         font-size: 1.2rem;
