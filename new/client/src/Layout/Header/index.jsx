@@ -7,7 +7,7 @@ const Header = ({ goToSlide, activeIndex }) => {
       <div className="Header-wrapper">
         <div className="Header-title">
           <h3 onClick={() => window.location.reload()} className="Title">
-            JK-ZONE
+            JK-PORTFOLIO
           </h3>
         </div>
         <div className="Header-menu">
@@ -15,7 +15,7 @@ const Header = ({ goToSlide, activeIndex }) => {
             onClick={() => goToSlide(0)}
             className={activeIndex === 0 && "Menu-selected"}
           >
-            About me
+            About
           </h3>
           <h3
             onClick={() => goToSlide(1)}

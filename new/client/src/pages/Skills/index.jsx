@@ -222,7 +222,7 @@ const Container = styled.div`
   background-color: #2b2b2b;
   width: 100%;
   height: 100%;
-  gap: 1rem;
+  gap: 2rem;
   img {
     width: 100%;
     transition: 0.5s ease;

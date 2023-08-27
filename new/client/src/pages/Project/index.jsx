@@ -19,49 +19,51 @@ import { Navigation } from "swiper";
 
 const Project = ({ swiperRef }) => {
   return (
-    <Container>
-      <div
-        style={{
-          marginTop: "55px",
-          textAlign: "center",
-          textDecoration: "underline",
-          textUnderlineOffset: "10px",
-        }}
-      >
-        <h2>✔ PROJECTS</h2>
-      </div>
-      <Swiper
-        navigation={{
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        }}
-        speed={1000}
-        modules={[Navigation]}
-        style={{
-          width: "55%",
-          height: "80%",
-          borderRadius: "10px",
-        }}
-      >
-        <SwiperSlide>
-          <Project1 swiperRef={swiperRef} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Project2 swiperRef={swiperRef} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Project3 swiperRef={swiperRef} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Project4 swiperRef={swiperRef} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Project5 swiperRef={swiperRef} />
-        </SwiperSlide>
-        <div className="swiper-button-next"></div>
-        <div className="swiper-button-prev"></div>
-      </Swiper>
-    </Container>
+    <>
+      <Container>
+        <div
+          style={{
+            marginTop: "55px",
+            textAlign: "center",
+            textDecoration: "underline",
+            textUnderlineOffset: "10px",
+          }}
+        >
+          <h2>✔ PROJECTS</h2>
+        </div>
+        <Swiper
+          navigation={{
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          }}
+          speed={1000}
+          modules={[Navigation]}
+          style={{
+            width: "55%",
+            height: "80%",
+            borderRadius: "10px",
+          }}
+        >
+          <SwiperSlide>
+            <Project1 swiperRef={swiperRef} />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Project2 swiperRef={swiperRef} />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Project3 swiperRef={swiperRef} />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Project4 swiperRef={swiperRef} />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Project5 swiperRef={swiperRef} />
+          </SwiperSlide>
+          <div className="swiper-button-next"></div>
+          <div className="swiper-button-prev"></div>
+        </Swiper>
+      </Container>
+    </>
   );
 };
 
@@ -73,7 +75,7 @@ const Container = styled.div`
   background-color: #212121;
   width: 100%;
   height: 100%;
-  gap: 1rem;
+  gap: 2rem;
   color: white;
   .swiper-button-next,
   .swiper-button-prev {

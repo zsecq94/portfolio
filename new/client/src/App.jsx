@@ -17,7 +17,7 @@ import "swiper/css/pagination";
 function App() {
   const [activeIndex, setActiveIndex] = useState(0);
   const swiperRef = useRef(null);
-  const [mainCheck, setMainCheck] = useState(true);
+  const [mainCheck, setMainCheck] = useState(false);
 
   const handleHeaderChange = (swiper) => {
     setActiveIndex(swiper.activeIndex);
@@ -30,14 +30,13 @@ function App() {
   };
 
   return (
-    <div>
-      {!mainCheck && (
-        <Container>
+    <Container>
+      {!mainCheck ? (
+        <div className="main-wrapper">
           <Main setMainCheck={setMainCheck} />
-        </Container>
-      )}
-      {mainCheck && (
-        <>
+        </div>
+      ) : (
+        <div className="main-wrapper2">
           <Header goToSlide={goToSlide} activeIndex={activeIndex} />
           <Swiper
             ref={swiperRef}
@@ -58,7 +57,7 @@ function App() {
             }}
           >
             <SwiperSlide>
-              <About />
+              <About goToSlide={goToSlide} />
             </SwiperSlide>
             <SwiperSlide>
               <Skills />
@@ -70,20 +69,24 @@ function App() {
               <Contact />
             </SwiperSlide>
           </Swiper>
-        </>
+        </div>
       )}
-    </div>
+    </Container>
   );
 }
 
 export default App;
 
 const Container = styled.div`
-  display: flex;
-  width: 100%;
-  height: 100vh;
-  background-color: black;
-  color: white;
-  justify-content: center;
-  align-items: center;
+  .main-wrapper {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    color: white;
+    justify-content: center;
+    align-items: center;
+  }
+  .main-wrapper2 {
+  }
 `;
