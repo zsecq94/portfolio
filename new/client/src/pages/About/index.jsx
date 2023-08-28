@@ -39,7 +39,7 @@ const About = ({ goToSlide, activeIndex }) => {
               <span>CONTACT.</span>
               <span>EMAIL.</span>
               <span>EDUCATION.</span>
-              <span>MAIN SKILLS.</span>
+              <span className="main-skills">MAIN SKILLS.</span>
             </div>
             <div className="detail">
               <span>배 중 권</span>
@@ -48,9 +48,7 @@ const About = ({ goToSlide, activeIndex }) => {
               <span>010-2556-8761</span>
               <span>zsecq94@gmail.com</span>
               <span>삼성 청년 SW 아카데미 8기 수료</span>
-              <span
-                style={{ display: "flex", flexDirection: "row", gap: "0.5rem" }}
-              >
+              <div className="main-skills">
                 <span
                   style={{
                     backgroundColor: "#FFC436",
@@ -117,25 +115,28 @@ const About = ({ goToSlide, activeIndex }) => {
                 >
                   MySQL
                 </span>
-              </span>
+              </div>
             </div>
           </div>
           <hr style={{ margin: "10px 0 10px 0" }} />
           <span style={{ color: "gray", fontSize: "1.2rem" }}>
-            FE 개발에 가장 집중하고 있는 부분은 디테일입니다. 프로젝트를 수행할
-            때, UI/UX 디자인과 웹 접근성을 고려하여 사용자 경험을 개선하는 데
-            주력했으며, 피그마 제작 시안을 실제 개발환경에 맞게 구현하는
-            작업에서 버튼 하나하나 디테일한 부분까지 신경 써서 작업해 왔습니다.
-            주력으로 집중했던 디테일한 작업을 통해 사용자 경험을 개선하고,
-            사용자들의 피드백을 수집하고 분석하여 UI/UX 개선에 반영하는 작업을
-            맡아서 해보고 싶습니다. 추가로 앞으로의 로드맵입니다. Three.js,
-            Canvas, WebGL 등 디자인적인 기술을 꾸준히 학습하여 습득하고자
-            합니다. 그리고 UI/UX 디자인과의 연계를 통해, 사용자 친화적인
-            인터페이스를 구현하는 기술력을 높이고 싶습니다. 또한, 프로젝트를
-            통해 협업 능력을 향상시키고, 함께 성장하는 기회를 만들고자 합니다.
+            제 주된 관심사는 프론트엔드(FE) 개발의 디테일입니다. 프로젝트를
+            수행할 때 UI/UX 디자인과 웹 접근성을 고려하여 사용자 경험을
+            향상시키는 데 주력하였으며, 피그마로 제작한 시안을 실제 개발 환경에
+            맞게 구현하는 작업에서 버튼 하나하나의 세부 사항까지 신경을 쓰며
+            작업해 왔습니다. 이러한 디테일한 작업을 통해 사용자 경험을 개선하고
+            사용자들의 피드백을 수집하고 분석하여 UI/UX를 개선하는 작업에
+            주력하고자 합니다.
+          </span>
+          <span style={{ color: "gray", fontSize: "1.2rem" }}>
+            앞으로는 Three.js, Canvas, WebGL 등과 같은 디자인 관련 기술을 꾸준히
+            학습하여 숙달하고자 하며, 이러한 기술을 UI/UX 디자인과 연계하여
+            사용자 친화적인 인터페이스를 구현하는 능력을 향상시키고 싶습니다.
+            또한, 프로젝트를 통해 협업 능력을 향상시키고 함께 성장하는 기회를
+            찾고 있습니다.
           </span>
           <br />
-          <div style={{ display: "flex", gap: "1rem" }}>
+          <div className="atag">
             <a
               href="https://github.com/zsecq94"
               target="_blank"
@@ -167,11 +168,11 @@ const Container = styled.div`
   .about-wrapper {
     display: flex;
     flex-direction: row;
-    width: 50%;
+    width: 55%;
     height: 60%;
     gap: 2rem;
     .about-img {
-      width: 40%;
+      width: 35%;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -182,10 +183,19 @@ const Container = styled.div`
       width: 60%;
       justify-content: center;
       text-align: left;
+      .atag {
+        display: flex;
+        gap: 1rem;
+      }
       .about-profile {
         display: flex;
         flex-direction: row;
         gap: 1rem;
+        .main-skills {
+          display: flex;
+          flex-direction: row;
+          gap: 0.5rem;
+        }
         .title {
           display: flex;
           flex-direction: column;
@@ -210,6 +220,53 @@ const Container = styled.div`
         &:hover {
           color: white;
           background-color: black;
+        }
+      }
+    }
+  }
+  @media (max-width: 1680px) {
+    .about-wrapper {
+      width: 80%;
+      height: 70%;
+    }
+  }
+  @media (max-width: 1024px) {
+    .about-wrapper {
+      width: 90%;
+      height: 70%;
+    }
+  }
+  @media (max-width: 768px) {
+    .about-wrapper {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+      gap: 2rem;
+      justify-content: center;
+      align-items: center;
+      h4 {
+        font-size: 1.2rem;
+      }
+      .about-img {
+      }
+      .about-main {
+        width: 80%;
+        .atag {
+          display: none;
+        }
+        .about-profile {
+          .main-skills {
+            display: none;
+          }
+          .title {
+          }
+          .detail {
+            display: flex;
+            flex-direction: column;
+            color: "white";
+            gap: 0.1rem;
+          }
         }
       }
     }

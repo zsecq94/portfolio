@@ -44,10 +44,10 @@ const Project4 = ({ swiperRef }) => {
     <Container onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
       <h2>YB MOVIE</h2>
       <h5 style={{ color: "gray" }}>22.12.15 ~ 22.12.23(1주)</h5>
-      <hr style={{ margin: "1% 5% 0% 4%" }} />
+      <hr className="top-hr" />
       <div className="pjt4-wrapper">
         <div className="img-wrapper">
-          <img src={mainImgUrl} alt="#" />
+          <img src={mainImgUrl} alt="#" style={{ width: "104%" }} />
           <h4>{imgName}</h4>
           <hr />
           <div style={{ display: "flex" }}>
@@ -84,7 +84,7 @@ const Project4 = ({ swiperRef }) => {
                 gap: "5px",
               }}
             >
-              <span style={{ display: "flex", gap: "3%" }}>
+              <div className="fe-skills">
                 <span
                   style={{
                     backgroundColor: "#FFC436",
@@ -129,8 +129,8 @@ const Project4 = ({ swiperRef }) => {
                 >
                   Vuetify
                 </span>
-              </span>
-              <span style={{ display: "flex", gap: "3%" }}>
+              </div>
+              <div className="be-skills">
                 <span
                   style={{
                     backgroundColor: "#A8DF8E",
@@ -142,11 +142,9 @@ const Project4 = ({ swiperRef }) => {
                 >
                   Django
                 </span>
-              </span>
+              </div>
               <span>Full-Stack (2/2명)</span>
-              <span>
-                영화정보 API를 받아와 사용자의 선택에 따라서 추천해주는 플랫폼
-              </span>
+              <span>영화 추천 서비스</span>
             </div>
           </div>
           <div style={{ display: "flex" }}>
@@ -228,6 +226,9 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   text-align: center;
+  .top-hr {
+    margin: 1% 5% 0 4%;
+  }
   .pjt4-wrapper {
     display: flex;
     flex-direction: row;
@@ -239,6 +240,14 @@ const Container = styled.div`
       display: flex;
       flex-direction: column;
       gap: 0.7rem;
+      .fe-skills {
+        display: flex;
+        gap: 3%;
+      }
+      .be-skills {
+        display: flex;
+        gap: 3%;
+      }
       h4 {
         text-align: left;
       }
@@ -282,6 +291,54 @@ const Container = styled.div`
       &-thumb {
         background-color: gray;
         border-radius: 5px;
+      }
+    }
+  }
+  @media (max-width: 768px) {
+    .top-hr {
+      margin: 1% 9% 0 4%;
+    }
+    .pjt4-wrapper {
+      display: flex;
+      flex-direction: row;
+      height: 100%;
+
+      .img-wrapper {
+        align-items: center;
+        padding: 5%;
+        width: 85%;
+        display: flex;
+        flex-direction: column;
+        gap: 0.7rem;
+        h4 {
+          text-align: left;
+        }
+        span {
+          text-align: left;
+          font-size: 0.7rem;
+        }
+        img {
+          width: 100%;
+          border-radius: 10px;
+        }
+        .img1 {
+          transition: 0.5s ease-in-out;
+          &:hover {
+            opacity: 0.1;
+          }
+        }
+        .subimg {
+          padding: 1%;
+          width: 18%;
+          cursor: pointer;
+          transition: filter 0.3s ease;
+        }
+        .subimg.selected {
+          filter: brightness(0.1);
+        }
+      }
+      .main-content {
+        display: none;
       }
     }
   }

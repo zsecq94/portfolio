@@ -37,12 +37,8 @@ const Project = ({ swiperRef }) => {
             prevEl: ".swiper-button-prev",
           }}
           speed={1000}
+          className="mySwiper"
           modules={[Navigation]}
-          style={{
-            width: "55%",
-            height: "80%",
-            borderRadius: "10px",
-          }}
         >
           <SwiperSlide>
             <Project1 swiperRef={swiperRef} />
@@ -77,6 +73,11 @@ const Container = styled.div`
   height: 100%;
   gap: 2rem;
   color: white;
+  .mySwiper {
+    width: 55%;
+    height: 80%;
+    border-radius: 10px;
+  }
   .swiper-button-next,
   .swiper-button-prev {
     font-weight: bold;
@@ -84,6 +85,27 @@ const Container = styled.div`
     transition: 0.3s ease-in-out;
     &:hover {
       color: black;
+    }
+  }
+  @media (max-width: 1680px) {
+    .mySwiper {
+      width: 70%;
+    }
+  }
+  @media (max-width: 1024px) {
+    .mySwiper {
+      width: 90%;
+    }
+  }
+  @media (max-width: 768px) {
+    .mySwiper {
+      width: 80%;
+      margin-bottom: 10%;
+      border-radius: 10px;
+      .swiper-button-next,
+      .swiper-button-prev {
+        color: black;
+      }
     }
   }
 `;

@@ -44,7 +44,7 @@ const Project5 = ({ swiperRef }) => {
     <Container onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
       <h2>Portfolio</h2>
       <h5 style={{ color: "gray" }}>23.08.14 ~ 23.08.25(2주)</h5>
-      <hr style={{ margin: "1% 5% 0% 4%" }} />
+      <hr className="top-hr" />
       <div className="pjt5-wrapper">
         <div className="img-wrapper">
           <img src={mainImgUrl} alt="#" />
@@ -84,7 +84,7 @@ const Project5 = ({ swiperRef }) => {
                 gap: "5px",
               }}
             >
-              <span style={{ display: "flex", gap: "3%" }}>
+              <div className="fe-skills">
                 <span
                   style={{
                     backgroundColor: "#FFC436",
@@ -118,8 +118,8 @@ const Project5 = ({ swiperRef }) => {
                 >
                   Sass
                 </span>
-              </span>
-              <span style={{ display: "flex", gap: "3%" }}>
+              </div>
+              <div className="be-skills">
                 <span
                   style={{
                     backgroundColor: "#F8DE22",
@@ -131,7 +131,7 @@ const Project5 = ({ swiperRef }) => {
                 >
                   Firebase
                 </span>
-              </span>
+              </div>
               <span>Frontend</span>
               <span>개인 포트폴리오 제작</span>
             </div>
@@ -211,6 +211,9 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   text-align: center;
+  .top-hr {
+    margin: 1% 5% 0 4%;
+  }
   .pjt5-wrapper {
     display: flex;
     flex-direction: row;
@@ -222,6 +225,14 @@ const Container = styled.div`
       display: flex;
       flex-direction: column;
       gap: 0.7rem;
+      .fe-skills {
+        display: flex;
+        gap: 3%;
+      }
+      .be-skills {
+        display: flex;
+        gap: 3%;
+      }
       h4 {
         text-align: left;
       }
@@ -265,6 +276,54 @@ const Container = styled.div`
       &-thumb {
         background-color: gray;
         border-radius: 5px;
+      }
+    }
+  }
+  @media (max-width: 768px) {
+    .top-hr {
+      margin: 1% 9% 0 4%;
+    }
+    .pjt5-wrapper {
+      display: flex;
+      flex-direction: row;
+      height: 100%;
+
+      .img-wrapper {
+        align-items: center;
+        padding: 5%;
+        width: 85%;
+        display: flex;
+        flex-direction: column;
+        gap: 0.7rem;
+        h4 {
+          text-align: left;
+        }
+        span {
+          text-align: left;
+          font-size: 0.7rem;
+        }
+        img {
+          width: 100%;
+          border-radius: 10px;
+        }
+        .img1 {
+          transition: 0.5s ease-in-out;
+          &:hover {
+            opacity: 0.1;
+          }
+        }
+        .subimg {
+          padding: 1%;
+          width: 18%;
+          cursor: pointer;
+          transition: filter 0.3s ease;
+        }
+        .subimg.selected {
+          filter: brightness(0.1);
+        }
+      }
+      .main-content {
+        display: none;
       }
     }
   }

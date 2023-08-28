@@ -251,6 +251,51 @@ const Container = styled.div`
       }
     }
   }
+  @media (max-width: 1680px) {
+    h4 {
+      font-size: 1rem;
+    }
+  }
+  @media (max-width: 1024px) {
+    h4 {
+      font-size: 0.5rem;
+    }
+  }
+  @media (max-width: 768px) {
+    padding-bottom: 10%;
+    img {
+      width: 100%;
+      transition: 0.5s ease;
+    }
+    h4 {
+      text-align: center;
+      font-size: 1rem;
+    }
+    .skills-main1 {
+      display: flex;
+      flex-direction: column;
+      width: 75%;
+      gap: 3rem;
+      justify-content: center;
+      align-items: center;
+      .skills-one {
+        background-color: white;
+        border-radius: 10px;
+        width: 75%;
+      }
+      .skills-two {
+        display: flex;
+        flex-direction: column;
+        gap: 2.5rem;
+        width: 87%;
+        .two {
+          padding: 1rem;
+          background-color: white;
+          border-radius: 10px;
+        }
+      }
+    }
+  }
 `;
 
 const SkillItem = styled.div`

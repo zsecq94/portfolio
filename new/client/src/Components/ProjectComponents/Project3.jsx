@@ -44,7 +44,7 @@ const Project3 = ({ swiperRef }) => {
     <Container onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
       <h2>My PC</h2>
       <h5 style={{ color: "gray" }}>23.01.03 ~ 23.02.17(7주)</h5>
-      <hr style={{ margin: "1% 5% 0% 4%" }} />
+      <hr className="top-hr" />
       <div className="pjt3-wrapper">
         <div className="img-wrapper">
           <img src={mainImgUrl} alt="#" />
@@ -84,7 +84,7 @@ const Project3 = ({ swiperRef }) => {
                 gap: "5px",
               }}
             >
-              <span style={{ display: "flex", gap: "3%" }}>
+              <div className="fe-skills">
                 <span
                   style={{
                     backgroundColor: "#FFC436",
@@ -129,8 +129,8 @@ const Project3 = ({ swiperRef }) => {
                 >
                   Sass
                 </span>
-              </span>
-              <span style={{ display: "flex", gap: "3%" }}>
+              </div>
+              <div className="be-skills">
                 <span
                   style={{
                     backgroundColor: "green",
@@ -164,11 +164,9 @@ const Project3 = ({ swiperRef }) => {
                 >
                   MySQL
                 </span>
-              </span>
+              </div>
               <span>Full-Stack (2/5명)</span>
-              <span>
-                누구나 쉽게 퍼스널 컬러를 진단받고 화장 추천을 해주는 플랫폼
-              </span>
+              <span>퍼스널 컬러 진단 플랫폼</span>
             </div>
           </div>
           <div style={{ display: "flex" }}>
@@ -274,6 +272,9 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   text-align: center;
+  .top-hr {
+    margin: 1% 5% 0 4%;
+  }
   .pjt3-wrapper {
     display: flex;
     flex-direction: row;
@@ -285,6 +286,14 @@ const Container = styled.div`
       display: flex;
       flex-direction: column;
       gap: 0.7rem;
+      .fe-skills {
+        display: flex;
+        gap: 3%;
+      }
+      .be-skills {
+        display: flex;
+        gap: 3%;
+      }
       h4 {
         text-align: left;
       }
@@ -328,6 +337,54 @@ const Container = styled.div`
       &-thumb {
         background-color: gray;
         border-radius: 5px;
+      }
+    }
+  }
+  @media (max-width: 768px) {
+    .top-hr {
+      margin: 1% 9% 0 4%;
+    }
+    .pjt3-wrapper {
+      display: flex;
+      flex-direction: row;
+      height: 100%;
+
+      .img-wrapper {
+        align-items: center;
+        padding: 5%;
+        width: 85%;
+        display: flex;
+        flex-direction: column;
+        gap: 0.7rem;
+        h4 {
+          text-align: left;
+        }
+        span {
+          text-align: left;
+          font-size: 0.7rem;
+        }
+        img {
+          width: 100%;
+          border-radius: 10px;
+        }
+        .img1 {
+          transition: 0.5s ease-in-out;
+          &:hover {
+            opacity: 0.1;
+          }
+        }
+        .subimg {
+          padding: 1%;
+          width: 18%;
+          cursor: pointer;
+          transition: filter 0.3s ease;
+        }
+        .subimg.selected {
+          filter: brightness(0.1);
+        }
+      }
+      .main-content {
+        display: none;
       }
     }
   }

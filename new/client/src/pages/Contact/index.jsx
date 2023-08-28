@@ -144,6 +144,49 @@ const Container = styled.div`
       }
     }
   }
+  @media (max-width: 1024px) {
+    img {
+      display: none;
+    }
+  }
+  @media (max-width: 768px) {
+    .contact-wrapper {
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+        input {
+          width: 100%;
+          height: 40px;
+          border-radius: 5px;
+        }
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+        }
+        textarea {
+          width: 100%;
+          height: 50px;
+          border-radius: 5px;
+        }
+        .btn1 {
+          width: 100%;
+          color: black;
+          background-color: white;
+          transition: 0.5s ease-in-out;
+          border-radius: 5px;
+          height: 60px;
+          font-weight: bold;
+          cursor: pointer;
+          &:hover {
+            color: white;
+            background-color: #212121;
+          }
+        }
+      }
+    }
+  }
 `;
 
 const Footer = styled.div`
@@ -159,5 +202,8 @@ const Footer = styled.div`
     &:hover {
       opacity: 0.1;
     }
+  }
+  @media (max-width: 768px) {
+    height: 100px;
   }
 `;

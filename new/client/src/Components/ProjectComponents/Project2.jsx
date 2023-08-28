@@ -44,7 +44,7 @@ const Project2 = ({ swiperRef }) => {
     <Container onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
       <h2>T:LENS</h2>
       <h5 style={{ color: "gray" }}>23.02.20 ~ 23.04.07(7주)</h5>
-      <hr style={{ margin: "1% 5% 0% 4%" }} />
+      <hr className="top-hr" />
       <div className="pjt2-wrapper">
         <div className="img-wrapper">
           <img src={mainImgUrl} alt="#" />
@@ -84,7 +84,7 @@ const Project2 = ({ swiperRef }) => {
                 gap: "5px",
               }}
             >
-              <span style={{ display: "flex", gap: "3%" }}>
+              <div className="fe-skills">
                 <span
                   style={{
                     backgroundColor: "#FFC436",
@@ -129,8 +129,8 @@ const Project2 = ({ swiperRef }) => {
                 >
                   D3
                 </span>
-              </span>
-              <span style={{ display: "flex", gap: "3%" }}>
+              </div>
+              <div className="be-skills">
                 <span
                   style={{
                     backgroundColor: "#A8DF8E",
@@ -153,9 +153,9 @@ const Project2 = ({ swiperRef }) => {
                 >
                   MySQL
                 </span>
-              </span>
+              </div>
               <span>Frontend (2/6명)</span>
-              <span>사용자를 위한 가장 담백한 뉴스 트랜드 분석 서비스</span>
+              <span>뉴스 트랜드 분석 서비스</span>
             </div>
           </div>
           <div style={{ display: "flex" }}>
@@ -244,6 +244,9 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   text-align: center;
+  .top-hr {
+    margin: 1% 5% 0 4%;
+  }
   .pjt2-wrapper {
     display: flex;
     flex-direction: row;
@@ -255,6 +258,14 @@ const Container = styled.div`
       display: flex;
       flex-direction: column;
       gap: 0.7rem;
+      .fe-skills {
+        display: flex;
+        gap: 3%;
+      }
+      .be-skills {
+        display: flex;
+        gap: 3%;
+      }
       h4 {
         text-align: left;
       }
@@ -298,6 +309,54 @@ const Container = styled.div`
       &-thumb {
         background-color: gray;
         border-radius: 5px;
+      }
+    }
+  }
+  @media (max-width: 768px) {
+    .top-hr {
+      margin: 1% 9% 0 4%;
+    }
+    .pjt2-wrapper {
+      display: flex;
+      flex-direction: row;
+      height: 100%;
+
+      .img-wrapper {
+        align-items: center;
+        padding: 5%;
+        width: 85%;
+        display: flex;
+        flex-direction: column;
+        gap: 0.7rem;
+        h4 {
+          text-align: left;
+        }
+        span {
+          text-align: left;
+          font-size: 0.7rem;
+        }
+        img {
+          width: 100%;
+          border-radius: 10px;
+        }
+        .img1 {
+          transition: 0.5s ease-in-out;
+          &:hover {
+            opacity: 0.1;
+          }
+        }
+        .subimg {
+          padding: 1%;
+          width: 18%;
+          cursor: pointer;
+          transition: filter 0.3s ease;
+        }
+        .subimg.selected {
+          filter: brightness(0.1);
+        }
+      }
+      .main-content {
+        display: none;
       }
     }
   }

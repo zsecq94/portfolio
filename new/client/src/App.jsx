@@ -17,7 +17,7 @@ import "swiper/css/pagination";
 function App() {
   const [activeIndex, setActiveIndex] = useState(0);
   const swiperRef = useRef(null);
-  const [mainCheck, setMainCheck] = useState(false);
+  const [mainCheck, setMainCheck] = useState(true);
 
   const handleHeaderChange = (swiper) => {
     setActiveIndex(swiper.activeIndex);
@@ -26,6 +26,20 @@ function App() {
   const goToSlide = (slideIndex) => {
     if (swiperRef.current && swiperRef.current.swiper) {
       swiperRef.current.swiper.slideTo(slideIndex);
+    }
+  };
+
+  const goToScroll = (name) => {
+    var location = document.querySelector("." + name).offsetTop;
+    window.scrollTo({ top: location, behavior: "smooth" });
+  };
+
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = (name) => {
+    setMenuOpen(!menuOpen);
+    if (name?.length >= 1) {
+      goToScroll(name);
     }
   };
 
@@ -71,6 +85,26 @@ function App() {
           </Swiper>
         </div>
       )}
+      <div className="mobile-wrapper">
+        <Header
+          menuOpen={menuOpen}
+          toggleMenu={toggleMenu}
+          goToSlide={goToSlide}
+          activeIndex={activeIndex}
+        />
+        <div className="about">
+          <About goToSlide={goToSlide} />
+        </div>
+        <div className="skills">
+          <Skills className="skills" />
+        </div>
+        <div className="projects">
+          <Project className="projects" swiperRef={swiperRef} />
+        </div>
+        <div className="contact">
+          <Contact className="contact" />
+        </div>
+      </div>
     </Container>
   );
 }
@@ -87,6 +121,14 @@ const Container = styled.div`
     justify-content: center;
     align-items: center;
   }
-  .main-wrapper2 {
+  @media (min-width: 769px) {
+    .mobile-wrapper {
+      display: none;
+    }
+  }
+  @media (max-width: 768px) {
+    .main-wrapper2 {
+      display: none;
+    }
   }
 `;
