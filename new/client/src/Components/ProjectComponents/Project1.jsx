@@ -16,7 +16,7 @@ const Project1 = ({ swiperRef }) => {
 
   useEffect(() => {
     if (mainImgUrl === imgUrls[0]) {
-      setImgName("Main-Flow");
+      setImgName("Flow");
     } else if (mainImgUrl === imgUrls[1]) {
       setImgName("Login");
     } else if (mainImgUrl === imgUrls[2]) {

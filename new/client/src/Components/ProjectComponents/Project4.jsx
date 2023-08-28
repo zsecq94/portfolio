@@ -42,7 +42,7 @@ const Project4 = ({ swiperRef }) => {
 
   return (
     <Container onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-      <h1>YB MOVIE</h1>
+      <h2>YB MOVIE</h2>
       <h5 style={{ color: "gray" }}>22.12.15 ~ 22.12.23(1주)</h5>
       <hr style={{ margin: "1% 5% 0% 4%" }} />
       <div className="pjt4-wrapper">

@@ -28,7 +28,7 @@ const About = ({ goToSlide, activeIndex }) => {
         </div>
         <div className="about-main">
           <h4 style={{ color: "white" }}>
-            안녕하세요 신입 프론트엔드 개발자 배중권입니다.
+            안녕하세요 프론트엔드 개발자 배중권입니다.
           </h4>
           <hr style={{ margin: "10px 0 10px 0" }} />
           <div className="about-profile">
