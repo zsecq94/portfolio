@@ -138,7 +138,7 @@ const Project5 = ({ swiperRef }) => {
           </div>
           <div style={{ display: "flex" }}>
             <a
-              href="https://github.com/zsecq94/crawling"
+              href="https://github.com/zsecq94/portfolio"
               target="_blank"
               rel="noreferrer"
             >
