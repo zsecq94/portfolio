@@ -2,6 +2,8 @@
 포트폴리오
 
 ```
+cd new
+cd client
 npm install
 npm start
 react
