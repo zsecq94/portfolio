@@ -1,11 +1,9 @@
 import React, { useState, useRef } from "react";
 import Header from "./Layout/Header";
-import Main from "./Pages/Main";
 import About from "./Pages/About";
 import Skills from "./Pages/Skills";
 import Project from "./Pages/Project";
 import Contact from "./Pages/Contact";
-import styled from "styled-components";
 
 import "./App.scss";
 
@@ -17,7 +15,6 @@ import "swiper/css/pagination";
 function App() {
   const [activeIndex, setActiveIndex] = useState(0);
   const swiperRef = useRef(null);
-  const [mainCheck, setMainCheck] = useState(true);
 
   const handleHeaderChange = (swiper) => {
     setActiveIndex(swiper.activeIndex);
@@ -44,47 +41,41 @@ function App() {
   };
 
   return (
-    <Container>
-      {!mainCheck ? (
-        <div className="main-wrapper">
-          <Main setMainCheck={setMainCheck} />
-        </div>
-      ) : (
-        <div className="main-wrapper2">
-          <Header goToSlide={goToSlide} activeIndex={activeIndex} />
-          <Swiper
-            ref={swiperRef}
-            speed={1500}
-            direction={"vertical"}
-            pagination={{
-              clickable: true,
-              dynamicBullets: true,
-            }}
-            modules={[Pagination, Mousewheel]}
-            slidesPerView={1}
-            style={{ height: "100vh" }}
-            onSlideChange={handleHeaderChange}
-            mousewheel={{
-              invert: false,
-              forceToAxis: true,
-              sensitivity: 1,
-            }}
-          >
-            <SwiperSlide>
-              <About goToSlide={goToSlide} />
-            </SwiperSlide>
-            <SwiperSlide>
-              <Skills />
-            </SwiperSlide>
-            <SwiperSlide>
-              <Project swiperRef={swiperRef} />
-            </SwiperSlide>
-            <SwiperSlide>
-              <Contact />
-            </SwiperSlide>
-          </Swiper>
-        </div>
-      )}
+    <div className="app-wrapper">
+      <div className="main-wrapper">
+        <Header goToSlide={goToSlide} activeIndex={activeIndex} />
+        <Swiper
+          ref={swiperRef}
+          speed={1500}
+          direction={"vertical"}
+          pagination={{
+            clickable: true,
+            dynamicBullets: true,
+          }}
+          modules={[Pagination, Mousewheel]}
+          slidesPerView={1}
+          style={{ height: "100vh" }}
+          onSlideChange={handleHeaderChange}
+          mousewheel={{
+            invert: false,
+            forceToAxis: true,
+            sensitivity: 1,
+          }}
+        >
+          <SwiperSlide>
+            <About goToSlide={goToSlide} />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Skills />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Project swiperRef={swiperRef} />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Contact />
+          </SwiperSlide>
+        </Swiper>
+      </div>
       <div className="mobile-wrapper">
         <Header
           menuOpen={menuOpen}
@@ -93,42 +84,20 @@ function App() {
           activeIndex={activeIndex}
         />
         <div className="about">
-          <About goToSlide={goToSlide} />
+          <About />
         </div>
         <div className="skills">
-          <Skills className="skills" />
+          <Skills />
         </div>
         <div className="projects">
-          <Project className="projects" swiperRef={swiperRef} />
+          <Project swiperRef={swiperRef} />
         </div>
         <div className="contact">
-          <Contact className="contact" />
+          <Contact />
         </div>
       </div>
-    </Container>
+    </div>
   );
 }
 
 export default App;
-
-const Container = styled.div`
-  .main-wrapper {
-    display: flex;
-    width: 100%;
-    height: 100vh;
-    background-color: black;
-    color: white;
-    justify-content: center;
-    align-items: center;
-  }
-  @media (min-width: 769px) {
-    .mobile-wrapper {
-      display: none;
-    }
-  }
-  @media (max-width: 768px) {
-    .main-wrapper2 {
-      display: none;
-    }
-  }
-`;

@@ -1,10 +1,18 @@
 import React from "react";
-import styled from "styled-components";
+import Skills from "../../Components/Skills";
 
 import "./About.scss";
-const About = ({ goToSlide, activeIndex }) => {
+const skillList = [
+  "JavaScript",
+  "React",
+  "Vue.js",
+  "Node.js",
+  "Django",
+  "MySQL",
+];
+const About = ({ goToSlide }) => {
   return (
-    <Container>
+    <div className="about">
       <div
         style={{
           marginTop: "55px",
@@ -49,72 +57,9 @@ const About = ({ goToSlide, activeIndex }) => {
               <span>zsecq94@gmail.com</span>
               <span>삼성 청년 SW 아카데미 8기 수료</span>
               <div className="main-skills">
-                <span
-                  style={{
-                    backgroundColor: "#FFC436",
-                    color: "white",
-                    fontWeight: "bold",
-                    borderRadius: "5px",
-                    padding: "0 2% 0 2%",
-                  }}
-                >
-                  Javascript
-                </span>
-                <span
-                  style={{
-                    backgroundColor: "#279EFF",
-                    color: "white",
-                    fontWeight: "bold",
-                    borderRadius: "5px",
-                    padding: "0 2% 0 2%",
-                  }}
-                >
-                  React
-                </span>
-                <span
-                  style={{
-                    backgroundColor: "#279EFF",
-                    color: "white",
-                    fontWeight: "bold",
-                    borderRadius: "5px",
-                    padding: "0 2% 0 2%",
-                  }}
-                >
-                  Vue.js
-                </span>
-                <span
-                  style={{
-                    backgroundColor: "#A8DF8E",
-                    color: "white",
-                    fontWeight: "bold",
-                    borderRadius: "5px",
-                    padding: "0 2% 0 2%",
-                  }}
-                >
-                  Node.js
-                </span>
-                <span
-                  style={{
-                    backgroundColor: "green",
-                    color: "white",
-                    fontWeight: "bold",
-                    borderRadius: "5px",
-                    padding: "0 2% 0 2%",
-                  }}
-                >
-                  Django
-                </span>
-                <span
-                  style={{
-                    backgroundColor: "#1450A3",
-                    color: "white",
-                    fontWeight: "bold",
-                    borderRadius: "5px",
-                    padding: "0 2% 0 2%",
-                  }}
-                >
-                  MySQL
-                </span>
+                {skillList.map((skill) => (
+                  <Skills skill={skill} />
+                ))}
               </div>
             </div>
           </div>
@@ -150,125 +95,8 @@ const About = ({ goToSlide, activeIndex }) => {
           </div>
         </div>
       </div>
-    </Container>
+    </div>
   );
 };
 
 export default About;
-
-const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #212121;
-  width: 100%;
-  height: 100%;
-  gap: 5rem;
-  color: white;
-  .about-wrapper {
-    display: flex;
-    flex-direction: row;
-    width: 55%;
-    height: 60%;
-    gap: 2rem;
-    .about-img {
-      width: 35%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    .about-main {
-      display: flex;
-      flex-direction: column;
-      width: 60%;
-      justify-content: center;
-      text-align: left;
-      .atag {
-        display: flex;
-        gap: 1rem;
-      }
-      .about-profile {
-        display: flex;
-        flex-direction: row;
-        gap: 1rem;
-        .main-skills {
-          display: flex;
-          flex-direction: row;
-          gap: 0.5rem;
-        }
-        .title {
-          display: flex;
-          flex-direction: column;
-          font-weight: bold;
-          gap: 0.1rem;
-        }
-        .detail {
-          display: flex;
-          flex-direction: column;
-          color: "white";
-          gap: 0.1rem;
-        }
-      }
-      a {
-        background-color: white;
-        color: black;
-        padding: 1% 3% 1% 3%;
-        border-radius: 10px;
-        transition: 0.5s ease-in-out;
-        text-decoration-line: none;
-        font-weight: bold;
-        &:hover {
-          color: white;
-          background-color: black;
-        }
-      }
-    }
-  }
-  @media (max-width: 1680px) {
-    .about-wrapper {
-      width: 80%;
-      height: 70%;
-    }
-  }
-  @media (max-width: 1024px) {
-    .about-wrapper {
-      width: 90%;
-      height: 70%;
-    }
-  }
-  @media (max-width: 768px) {
-    .about-wrapper {
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-      height: 100%;
-      gap: 2rem;
-      justify-content: center;
-      align-items: center;
-      h4 {
-        font-size: 1.2rem;
-      }
-      .about-img {
-      }
-      .about-main {
-        width: 80%;
-        .atag {
-          display: none;
-        }
-        .about-profile {
-          .main-skills {
-            display: none;
-          }
-          .title {
-          }
-          .detail {
-            display: flex;
-            flex-direction: column;
-            color: "white";
-            gap: 0.1rem;
-          }
-        }
-      }
-    }
-  }
-`;

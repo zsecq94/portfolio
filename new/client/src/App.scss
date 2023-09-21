@@ -1,5 +1,14 @@
-.App-wrapper {
-  height: 100%;
+.app-wrapper {
+  @media (min-width: 769px) {
+    .mobile-wrapper {
+      display: none;
+    }
+  }
+  @media (max-width: 768px) {
+    .main-wrapper {
+      display: none;
+    }
+  }
 }
 .swiper-pagination-bullet {
   background-color: white !important;

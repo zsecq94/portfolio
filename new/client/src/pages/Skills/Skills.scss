@@ -1,2 +1,133 @@
-.Skills-wrapper {
+$primaryColor: #ffc436;
+$secondaryColor: #2b2b2b;
+$backgroundColor: white;
+
+.skills-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $secondaryColor;
+  width: 100%;
+  height: 100%;
+  gap: 2rem;
+
+  img {
+    width: 100%;
+    transition: 0.5s ease;
+  }
+
+  .skills-main1 {
+    display: flex;
+    width: 100%;
+    gap: 3rem;
+    justify-content: center;
+
+    .skills-one {
+      padding: 1rem;
+      background-color: $backgroundColor;
+      border-radius: 10px;
+      width: 12%;
+    }
+
+    .skills-two {
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+      width: 12%;
+
+      .two {
+        padding: 1rem;
+        background-color: $backgroundColor;
+        border-radius: 10px;
+      }
+    }
+  }
+
+  @media (max-width: 1680px) {
+    h4 {
+      font-size: 1rem;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    h4 {
+      font-size: 0.5rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding-bottom: 10%;
+
+    img {
+      width: 100%;
+      transition: 0.5s ease;
+    }
+
+    h4 {
+      text-align: center;
+      font-size: 1rem;
+    }
+
+    .skills-main1 {
+      display: flex;
+      flex-direction: column;
+      width: 75%;
+      gap: 3rem;
+      justify-content: center;
+      align-items: center;
+
+      .skills-one {
+        background-color: $backgroundColor;
+        border-radius: 10px;
+        width: 75%;
+      }
+
+      .skills-two {
+        display: flex;
+        flex-direction: column;
+        gap: 2.5rem;
+        width: 87%;
+
+        .two {
+          padding: 1rem;
+          background-color: $backgroundColor;
+          border-radius: 10px;
+        }
+      }
+    }
+  }
+}
+.skill-item {
+  position: relative;
+
+  img {
+    width: 100%;
+  }
+
+  &:hover {
+    img {
+      opacity: 0.1;
+      transform: scale(1.1);
+    }
+  }
+}
+
+.skill-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.skill-item:hover .skill-overlay {
+  opacity: 1;
 }
