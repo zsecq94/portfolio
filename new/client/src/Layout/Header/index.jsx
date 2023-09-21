@@ -79,7 +79,7 @@ const MenuContainer = styled.div`
   background-color: #fff;
   box-shadow: -4px 0 10px rgba(0, 0, 0, 0.1);
   transition: right 0.5s ease;
-  z-index: 999;
+  z-index: 99;
   overflow: hidden;
   display: flex;
   flex-direction: column;

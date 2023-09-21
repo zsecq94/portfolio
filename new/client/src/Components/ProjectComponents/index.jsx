@@ -42,11 +42,6 @@ const ProjectComponents = ({ swiperRef, V }) => {
     swiperRef.current.swiper.enable();
   };
 
-  const goReadme = () => {
-    console.log("READMEGO");
-    console.log(V.img);
-  };
-
   return (
     <div
       className="pjt"
@@ -118,9 +113,7 @@ const ProjectComponents = ({ swiperRef, V }) => {
                 style={{ width: "50px" }}
               />
             </a>
-            <button className="btn1" onClick={() => goReadme()}>
-              README
-            </button>
+            <button className="btn1">README</button>
           </div>
         </div>
         <div className="main-content">

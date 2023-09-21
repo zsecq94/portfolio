@@ -1,5 +1,4 @@
-import React from "react";
-import styled from "styled-components";
+import React, { useState } from "react";
 import data from "./data.json";
 import ProjectComponents from "../../Components/ProjectComponents";
 
