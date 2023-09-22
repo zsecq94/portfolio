@@ -78,11 +78,11 @@
   {
     "name": "YB MOVIE",
     "img": "4",
-    "imgName": ["Main", "Detail", "Worldcup", "Recommend", "Search & Bookmark"],
+    "imgName": ["Main", "Detail", "Worldcup", "Comment", "Search & Bookmark"],
     "period": "22.12.15 ~ 22.12.23(1주)",
     "fe": ["JavaScript", "Vue.js", "Vuex", "Vuetify"],
     "be": ["Django"],
-    "role": "Full-Stack (2/2명)",
+    "role": "Front-End (1/2명)",
     "outline": "영화 추천 서비스",
     "git": "https://github.com/zsecq94/ssafy-pjt/tree/main/pjt1",
     "explanation": "YB MOVIE는 데이터 기반 영화 추천 서비스 입니다. 사용자는 영화에 대한코멘트를 남길 수 있으며, 영화 이상형월드컵을 이용해 사용자가선호하는 장르를 파악하여 영화를 추천해주는 서비스입니다.",

@@ -8,23 +8,36 @@
   transform: translateY(-100%);
   transition: transform 0.5s ease;
   .modal-header {
+    position: sticky;
+    top: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 20%;
     height: 60px;
-    background-color: #4a4f5a;
+    background-color: #222;
     color: white;
     .back {
       transition: 0.5s ease;
       &:hover {
         cursor: pointer;
-        color: red;
+        color: purple;
+      }
+    }
+    .modal-header-menu {
+      display: flex;
+      gap: 2rem;
+      h6 {
+        transition: 0.5s ease;
+        &:hover {
+          cursor: pointer;
+          color: purple;
+        }
       }
     }
   }
   .modal-content {
-    padding: 5% 20%;
+    padding: 3% 20%;
   }
 }
 .modal-wrapper.open {
