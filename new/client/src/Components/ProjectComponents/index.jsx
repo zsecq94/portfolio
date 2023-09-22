@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import Skills from "../Skills";
 import "./ProjectComponents.scss";
 
-const ProjectComponents = ({ swiperRef, V }) => {
+const ProjectComponents = ({ swiperRef, V, toggleModal }) => {
   const [mainImgUrl, setMainImgUrl] = useState(
     `/images/projects/pjt${V.img}/1.gif`
   );
@@ -113,7 +113,9 @@ const ProjectComponents = ({ swiperRef, V }) => {
                 style={{ width: "50px" }}
               />
             </a>
-            <button className="btn1">README</button>
+            <button className="btn1" onClick={() => toggleModal(V.img)}>
+              README
+            </button>
           </div>
         </div>
         <div className="main-content">

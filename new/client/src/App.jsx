@@ -4,6 +4,7 @@ import About from "./Pages/About";
 import Skills from "./Pages/Skills";
 import Project from "./Pages/Project";
 import Contact from "./Pages/Contact";
+import Modal from "./Components/Modal";
 
 import "./App.scss";
 
@@ -32,6 +33,13 @@ function App() {
   };
 
   const [menuOpen, setMenuOpen] = useState(false);
+  const [modalOpen, setModalOpen] = useState(false);
+  const [checkModalNum, setCheckModalNum] = useState(0);
+
+  const toggleModal = (num) => {
+    setModalOpen(!modalOpen);
+    setCheckModalNum(num);
+  };
 
   const toggleMenu = (name) => {
     setMenuOpen(!menuOpen);
@@ -42,6 +50,11 @@ function App() {
 
   return (
     <div className="app-wrapper">
+      <Modal
+        toggleModal={toggleModal}
+        modalOpen={modalOpen}
+        checkModalNum={checkModalNum}
+      />
       <div className="main-wrapper">
         <Header goToSlide={goToSlide} activeIndex={activeIndex} />
         <Swiper
@@ -69,7 +82,7 @@ function App() {
             <Skills />
           </SwiperSlide>
           <SwiperSlide>
-            <Project swiperRef={swiperRef} />
+            <Project swiperRef={swiperRef} toggleModal={toggleModal} />
           </SwiperSlide>
           <SwiperSlide>
             <Contact />

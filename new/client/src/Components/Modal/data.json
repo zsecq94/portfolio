@@ -1,0 +1,32 @@
+[
+  {
+    "name": "BRUEMI",
+    "summary": "VSLAM기반 자율주행 서비스 로봇은 실내에서 물건을 전달해주는 수요응답형 서비스 로봇입니다. 로봇은 실내 지도작성, 위치추정, 장애물 회피 기능을 수행합니다. 천장을 보는 카메라를 이용하여 VSLAM을 사용하기에 빠르게 지도작성을 수행하고 초기세팅시간이 짧은 장점이 있습니다.",
+    "fe": "Front-end : JavaScript, React, Canvas, swiper, ws module, audio-player, Sass, styled-components, MUI",
+    "be": "Back-end : Node.js, Express, MySQL, ws module, fs module",
+    "role": [
+      "Full-Stack : 1명",
+      "영상처리 : 1명",
+      "임베디드 : 2명",
+      "자율주행 : 2명"
+    ],
+    "function": ["호출", "녹음", "취소", "로그인", "회원가입"],
+    "": ""
+  },
+  {
+    "name": "T:LENS",
+    "summary": "T:LENS는 키워드를 통해 실시간 트렌드를 쉽게 파악하고 싶은 사람과 기자별 맞춤형 구독 서비스가 필용한 사용자를 위한 실시간 크롤링 및 분산 처리를 통해 뉴스 트렌드를 종합하고 시각화하는 서비스입니다."
+  },
+  {
+    "name": "My PC",
+    "summary": ""
+  },
+  {
+    "name": "YB MOVIE",
+    "summary": ""
+  },
+  {
+    "name": "Portfolio",
+    "summary": ""
+  }
+]

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import data from "./data.json";
 import ProjectComponents from "../../Components/ProjectComponents";
 
@@ -9,7 +9,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation } from "swiper";
 
-const Project = ({ swiperRef }) => {
+const Project = ({ swiperRef, toggleModal }) => {
   return (
     <div className="project-wrapper">
       <div
@@ -33,7 +33,12 @@ const Project = ({ swiperRef }) => {
       >
         {data.map((V, index) => (
           <SwiperSlide>
-            <ProjectComponents key={index} V={V} swiperRef={swiperRef} />
+            <ProjectComponents
+              key={index}
+              V={V}
+              swiperRef={swiperRef}
+              toggleModal={toggleModal}
+            />
           </SwiperSlide>
         ))}
         <div className="swiper-button-next"></div>
