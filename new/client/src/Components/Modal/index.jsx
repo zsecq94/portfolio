@@ -83,7 +83,7 @@ const Modal = ({ toggleModal, modalOpen, checkModalNum }) => {
               </li>
               <img
                 style={{ width: "100%" }}
-                src={`./images/Modal/Pjt${V?.img}/${index + 1}.gif`}
+                src={`./images/Modal/pjt${V?.img}/${index + 1}.gif`}
                 alt=""
               />
               <br />
