@@ -33,7 +33,9 @@ const Modal = ({ toggleModal, modalOpen, checkModalNum }) => {
         <hr />
         <br />
         <div className="summary">
-          <h4>📌 Project Summary & Background </h4>
+          <h4 style={{ marginBottom: "10px" }}>
+            📌 Project Summary & Background{" "}
+          </h4>
           <span>{V?.summary}</span>
           <br />
           <br />
@@ -46,7 +48,7 @@ const Modal = ({ toggleModal, modalOpen, checkModalNum }) => {
         </div>
         <br />
         <div className="role">
-          <h4>❕ Role</h4>
+          <h4 style={{ marginBottom: "10px" }}>❕ Role</h4>
           {V?.role.map((C, index) => (
             <li
               key={index}
@@ -58,38 +60,30 @@ const Modal = ({ toggleModal, modalOpen, checkModalNum }) => {
         </div>
         <br />
         <div className="stack">
-          <h4>📜 Technology Stack</h4>
-          <li>
-            <span>{V?.fe}</span>
-          </li>
-          {V?.be && (
-            <li>
-              <span>{V.be}</span>
-            </li>
-          )}
-          {V?.de && (
-            <li>
-              <span>{V.de}</span>
-            </li>
-          )}
+          <h4 style={{ marginBottom: "10px" }}>📜 Technology Stack</h4>
+          <li>{V?.fe}</li>
+          {V?.be && <li>{V.be}</li>}
+          {V?.de && <li>{V.de}</li>}
         </div>
         <br />
         <div className="function">
-          <h4>🔨 Main Function</h4>
+          <h4 style={{ marginBottom: "10px" }}>🔨 Main Function</h4>
           {V?.function.map((C, index) => (
             <div style={{ width: "70%" }}>
               <li key={index} style={{ fontWeight: "bold" }}>
                 {C}
               </li>
               <img
-                style={{ width: "100%" }}
+                style={{ width: "100%", margin: "10px 0" }}
                 src={`./images/Modal/pjt${V?.img}/${index + 1}.gif`}
                 alt=""
               />
               <br />
-              <span style={{ wordWrap: "break-word" }}>
-                {V.function2[index]}
-              </span>
+              {V?.function2[index].split("<br/>").map((a) => (
+                <div style={{ wordWrap: "break-word", marginBottom: "10px" }}>
+                  <span>{a}</span>
+                </div>
+              ))}
               <br />
               <br />
             </div>
@@ -98,10 +92,13 @@ const Modal = ({ toggleModal, modalOpen, checkModalNum }) => {
         <hr />
         <br />
         <div className="review">
-          <h4>🚩 Project Review</h4>
+          <h4 style={{ marginBottom: "10px" }}>🚩 Project Review</h4>
+          {V?.review.map((C, index) => (
+            <li key={index}>{C}</li>
+          ))}
         </div>
         <br />
-        <h4>⚙️ Development Settings</h4>
+        <h4 style={{ marginBottom: "10px" }}>⚙️ Development Settings</h4>
       </div>
     </div>
   );
