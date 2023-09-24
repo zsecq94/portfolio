@@ -67,7 +67,18 @@ const Modal = ({ toggleModal, modalOpen, checkModalNum }) => {
         </div>
         <br />
         <div className="function">
-          <h4 style={{ marginBottom: "10px" }}>🔨 Main Function</h4>
+          <div
+            style={{
+              display: "flex",
+              marginBottom: "10px",
+              alignItems: "center",
+            }}
+          >
+            <h4>🔨 Main Function</h4>
+            <h6 style={{ color: "gray", marginLeft: "5px" }}>
+              (직접 구현한 기능에 대한 소개)
+            </h6>
+          </div>
           {V?.function.map((C, index) => (
             <div style={{ width: "70%" }}>
               <li key={index} style={{ fontWeight: "bold" }}>
@@ -79,7 +90,7 @@ const Modal = ({ toggleModal, modalOpen, checkModalNum }) => {
                 alt=""
               />
               <br />
-              {V?.function2[index].split("<br/>").map((a) => (
+              {V?.function2[index].split("////").map((a) => (
                 <div style={{ wordWrap: "break-word", marginBottom: "10px" }}>
                   <span>{a}</span>
                 </div>
@@ -93,6 +104,14 @@ const Modal = ({ toggleModal, modalOpen, checkModalNum }) => {
         <br />
         <div className="review">
           <h4 style={{ marginBottom: "10px" }}>🚩 Project Review</h4>
+          <h5># 총평</h5>
+          <span>1234</span>
+          <h5># Good Point</h5>
+          <span>1234</span>
+          <h5># Bad Point</h5>
+          <span>1234</span>
+          <h5># 개선사항</h5>
+          <span>1234</span>
           {V?.review.map((C, index) => (
             <li key={index}>{C}</li>
           ))}
