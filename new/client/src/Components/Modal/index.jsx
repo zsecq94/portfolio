@@ -1,5 +1,6 @@
 import React from "react";
 import data from "./data.json";
+import CodeBlock from "../CodeBlock";
 
 import "./Modal.scss";
 
@@ -19,10 +20,8 @@ const Modal = ({ toggleModal, modalOpen, checkModalNum }) => {
           <h6 onClick={() => goToScroll("summary")}>
             PJT SUMMARY & BACKGROUND
           </h6>
-          <h6 onClick={() => goToScroll("role")}>ROLE</h6>
-          <h6 onClick={() => goToScroll("stack")}>STACK</h6>
           <h6 onClick={() => goToScroll("function")}>FUNCTION</h6>
-          <h6 onClick={() => goToScroll("review")}>PJT REVIEW</h6>
+          <h6 onClick={() => goToScroll("learned")}>LEARNED</h6>
         </div>
         <h3 className="back" onClick={() => toggleModal()}>
           BACK
@@ -47,7 +46,7 @@ const Modal = ({ toggleModal, modalOpen, checkModalNum }) => {
           ))}
         </div>
         <br />
-        <div className="role">
+        <div>
           <h4 style={{ marginBottom: "10px" }}>❕ Role</h4>
           {V?.role.map((C, index) => (
             <li
@@ -59,7 +58,7 @@ const Modal = ({ toggleModal, modalOpen, checkModalNum }) => {
           ))}
         </div>
         <br />
-        <div className="stack">
+        <div>
           <h4 style={{ marginBottom: "10px" }}>📜 Technology Stack</h4>
           <li>{V?.fe}</li>
           {V?.be && <li>{V.be}</li>}
@@ -102,22 +101,26 @@ const Modal = ({ toggleModal, modalOpen, checkModalNum }) => {
         </div>
         <hr />
         <br />
-        <div className="review">
-          <h4 style={{ marginBottom: "10px" }}>🚩 Project Review</h4>
-          <h5># 총평</h5>
-          <span>1234</span>
-          <h5># Good Point</h5>
-          <span>1234</span>
-          <h5># Bad Point</h5>
-          <span>1234</span>
-          <h5># 개선사항</h5>
-          <span>1234</span>
-          {V?.review.map((C, index) => (
-            <li key={index}>{C}</li>
+        <div className="learned">
+          <h4 style={{ marginBottom: "10px" }}>🚩 Learned</h4>
+          {V?.title.map((C, index) => (
+            <div>
+              <h5 style={{ fontSize: "1rem" }}>{C}</h5>
+              <span>{V.learned[index]}</span>
+              <br />
+              <br />
+            </div>
           ))}
         </div>
+        <h4 style={{ marginBottom: "10px" }}>🔑 Result</h4>
+        {V?.result.map((C, index) => (
+          <div>
+            <li>{C}</li>
+          </div>
+        ))}
         <br />
-        <h4 style={{ marginBottom: "10px" }}>⚙️ Development Settings</h4>
+        <h4 style={{ marginBottom: "10px" }}>⚙️ Getting Started</h4>
+        <CodeBlock num={V?.img} />
       </div>
     </div>
   );

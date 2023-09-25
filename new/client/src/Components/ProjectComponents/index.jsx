@@ -118,21 +118,6 @@ const ProjectComponents = ({ swiperRef, V, toggleModal }) => {
             </button>
           </div>
         </div>
-        <div className="main-content">
-          <span style={{ fontWeight: "bold" }}>{V.explanation}</span>
-          <br />
-          <br />
-          {V.title.map((title, index) => (
-            <div key={index}>
-              <h5>{title}</h5>
-              <span>{V.learned[index]}</span>
-              <br />
-              <br />
-            </div>
-          ))}
-          <h5>{V.result[0]}</h5>
-          <span>{V.result[1]}</span>
-        </div>
       </div>
     </div>
   );

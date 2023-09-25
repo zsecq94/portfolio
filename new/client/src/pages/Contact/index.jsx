@@ -93,7 +93,7 @@ const Contact = () => {
           <img src="images/giticon.png" alt="" style={{ width: "50px" }} />
         </a>
         <h5>© 2023. Bae Joong Kwon. All rights reserved.</h5>
-        <VisitorCounter />
+        {/* <VisitorCounter /> */}
       </div>
     </div>
   );
