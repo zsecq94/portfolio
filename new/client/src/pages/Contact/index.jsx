@@ -1,4 +1,5 @@
 import React, { useRef } from "react";
+import VisitorCounter from "../../Components/VisitorCounter";
 import emailjs from "@emailjs/browser";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -92,6 +93,7 @@ const Contact = () => {
           <img src="images/giticon.png" alt="" style={{ width: "50px" }} />
         </a>
         <h5>© 2023. Bae Joong Kwon. All rights reserved.</h5>
+        <VisitorCounter />
       </div>
     </div>
   );

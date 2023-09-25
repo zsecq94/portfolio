@@ -80,7 +80,7 @@ const Modal = ({ toggleModal, modalOpen, checkModalNum }) => {
             </h6>
           </div>
           {V?.function.map((C, index) => (
-            <div style={{ width: "70%" }}>
+            <div className="img-content">
               <li key={index} style={{ fontWeight: "bold" }}>
                 {C}
               </li>

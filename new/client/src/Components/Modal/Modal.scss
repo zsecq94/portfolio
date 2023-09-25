@@ -38,6 +38,23 @@
   }
   .modal-content {
     padding: 3% 20%;
+    .img-content {
+      width: 70%;
+    }
+  }
+  @media (max-width: 768px) {
+    .modal-header {
+      padding: 0 2%;
+      .modal-header-menu {
+        display: none;
+      }
+    }
+    .modal-content {
+      padding: 3% 10%;
+      .img-content {
+        width: 100%;
+      }
+    }
   }
 }
 .modal-wrapper.open {

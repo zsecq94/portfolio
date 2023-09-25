@@ -103,7 +103,7 @@ function App() {
           <Skills />
         </div>
         <div className="projects">
-          <Project swiperRef={swiperRef} />
+          <Project swiperRef={swiperRef} toggleModal={toggleModal} />
         </div>
         <div className="contact">
           <Contact />
