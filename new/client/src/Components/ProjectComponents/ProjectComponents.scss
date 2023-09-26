@@ -30,7 +30,7 @@
           background-color: black;
           border-radius: 10px;
           color: white;
-          transition: 0.2s ease-in-out;
+          transition: 0.5s ease;
           cursor: pointer;
           &:hover {
             background-color: gray;
@@ -66,7 +66,7 @@
         border-radius: 10px;
       }
       .img1 {
-        transition: 0.2s ease-in-out;
+        transition: 0.5s ease;
         &:hover {
           opacity: 0.1;
         }
@@ -85,12 +85,7 @@
   @media (max-width: 768px) {
     display: flex;
     flex-direction: column;
-    .top-hr {
-      margin: 1% 9% 0 4%;
-    }
     .pjt1-wrapper {
-      height: 100%;
-
       .img-wrapper {
         align-items: center;
         padding: 5%;
@@ -100,33 +95,11 @@
         gap: 0.7rem;
         .pjt-footer {
           display: flex;
-          gap: 2rem;
-        }
-        h4 {
-          text-align: left;
+          gap: 4rem;
         }
         span {
           text-align: left;
           font-size: 0.7rem;
-        }
-        img {
-          width: 100%;
-          border-radius: 10px;
-        }
-        .img1 {
-          transition: 0.2s ease-in-out;
-          &:hover {
-            opacity: 0.1;
-          }
-        }
-        .subimg {
-          padding: 1%;
-          width: 18%;
-          cursor: pointer;
-          transition: filter 0.3s ease;
-        }
-        .subimg.selected {
-          filter: brightness(0.1);
         }
       }
     }

@@ -2,15 +2,15 @@ import React from "react";
 import Skills from "../../Components/Skills";
 
 import "./About.scss";
-const skillList = [
-  "JavaScript",
-  "React",
-  "Vue.js",
-  "Node.js",
-  "Django",
-  "MySQL",
-];
 const About = ({ goToSlide }) => {
+  const skillList = [
+    "JavaScript",
+    "React",
+    "Vue.js",
+    "Node.js",
+    "Django",
+    "MySQL",
+  ];
   return (
     <div className="about">
       <div
