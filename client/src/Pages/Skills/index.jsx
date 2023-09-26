@@ -37,38 +37,38 @@ const Skills = () => {
             }}
           >
             <div className="skill-item">
-              <img src="images/hjc.png" alt="#" />
+              <img src="images/hjc.avif" alt="#" />
               <div className="skill-overlay">⭐⭐⭐⭐⭐</div>
             </div>
             <div className="skill-item">
-              <img src="images/react.png" alt="#" />
+              <img src="images/react.avif" alt="#" />
               <div className="skill-overlay">⭐⭐⭐</div>
             </div>
             <div className="skill-item">
-              <img src="images/redux.png" alt="#" />
+              <img src="images/redux.avif" alt="#" />
               <div className="skill-overlay">⭐⭐</div>
             </div>
             <div className="skill-item">
-              <img src="images/vue.png" alt="#" />
+              <img src="images/vue.avif" alt="#" />
               <div className="skill-overlay">⭐</div>
             </div>
             <div style={{ display: "flex", gap: "0.5rem" }}>
               <div className="skill-item" style={{ width: "50%" }}>
-                <img src="images/sass.png" alt="#" />
+                <img src="images/sass.avif" alt="#" />
                 <div className="skill-overlay">⭐⭐⭐</div>
               </div>
               <div className="skill-item" style={{ width: "50%" }}>
-                <img src="images/styled-components.png" alt="#" />
+                <img src="images/styled-components.avif" alt="#" />
                 <div className="skill-overlay">⭐</div>
               </div>
             </div>
             <div style={{ display: "flex", gap: "0.5rem" }}>
               <div className="skill-item" style={{ width: "50%" }}>
-                <img src="images/mui.png" alt="#" />
+                <img src="images/mui.avif" alt="#" />
                 <div className="skill-overlay">⭐⭐⭐</div>
               </div>
               <div className="skill-item" style={{ width: "50%" }}>
-                <img src="images/coreui.png" alt="#" />
+                <img src="images/coreui.avif" alt="#" />
                 <div className="skill-overlay">⭐</div>
               </div>
             </div>
@@ -87,19 +87,19 @@ const Skills = () => {
               }}
             >
               <div className="skill-item">
-                <img src="images/node.png" alt="#" />
+                <img src="images/node.avif" alt="#" />
                 <div className="skill-overlay">⭐⭐</div>
               </div>
               <div className="skill-item">
-                <img src="images/django.png" alt="#" />
+                <img src="images/django.avif" alt="#" />
                 <div className="skill-overlay">⭐</div>
               </div>
               <div className="skill-item">
-                <img src="images/socket.png" alt="#" />
+                <img src="images/socket.avif" alt="#" />
                 <div className="skill-overlay">⭐⭐</div>
               </div>
               <div className="skill-item">
-                <img src="images/python.jpg" alt="#" />
+                <img src="images/python.avif" alt="#" />
                 <div className="skill-overlay">⭐</div>
               </div>
             </div>
@@ -116,11 +116,11 @@ const Skills = () => {
               }}
             >
               <div className="skill-item">
-                <img src="images/mysql.png" alt="#" />
+                <img src="images/mysql.avif" alt="#" />
                 <div className="skill-overlay">⭐⭐⭐</div>
               </div>
               <div className="skill-item">
-                <img src="images/mongo.png" alt="#" />
+                <img src="images/mongo.avif" alt="#" />
                 <div className="skill-overlay">⭐</div>
               </div>
             </div>
@@ -132,21 +132,21 @@ const Skills = () => {
             <hr />
             <div style={{ display: "flex", gap: "0.5rem", marginTop: "10px" }}>
               <div className="skill-item" style={{ width: "50%" }}>
-                <img src="images/apexcharts.png" alt="#" />
+                <img src="images/apexcharts.avif" alt="#" />
                 <div className="skill-overlay">⭐</div>
               </div>
               <div className="skill-item" style={{ width: "50%" }}>
-                <img src="images/chartjs.png" alt="#" />
+                <img src="images/chartjs.avif" alt="#" />
                 <div className="skill-overlay">⭐</div>
               </div>
             </div>
             <div style={{ display: "flex", gap: "0.5rem" }}>
               <div className="skill-item" style={{ width: "50%" }}>
-                <img src="images/d3.png" alt="#" />
+                <img src="images/d3.avif" alt="#" />
                 <div className="skill-overlay">⭐</div>
               </div>
               <div className="skill-item" style={{ width: "50%" }}>
-                <img src="images/wordcloud.png" alt="#" />
+                <img src="images/wordcloud.avif" alt="#" />
                 <div className="skill-overlay">⭐</div>
               </div>
             </div>
@@ -163,19 +163,19 @@ const Skills = () => {
               }}
             >
               <div className="skill-item">
-                <img src="images/jira.png" alt="#" />
+                <img src="images/jira.avif" alt="#" />
                 <div className="skill-overlay">⭐⭐⭐</div>
               </div>
               <div className="skill-item">
-                <img src="images/notion.png" alt="#" />
+                <img src="images/notion.avif" alt="#" />
                 <div className="skill-overlay">⭐⭐⭐</div>
               </div>
               <div className="skill-item">
-                <img src="images/figma.png" alt="#" />
+                <img src="images/figma.avif" alt="#" />
                 <div className="skill-overlay">⭐⭐⭐</div>
               </div>
               <div className="skill-item">
-                <img src="images/mm.png" alt="#" />
+                <img src="images/mm.avif" alt="#" />
                 <div className="skill-overlay">⭐⭐⭐</div>
               </div>
             </div>
@@ -193,15 +193,15 @@ const Skills = () => {
               }}
             >
               <div className="skill-item">
-                <img src="images/git.png" alt="#" />
+                <img src="images/git.avif" alt="#" />
                 <div className="skill-overlay">⭐⭐⭐⭐⭐</div>
               </div>
               <div className="skill-item">
-                <img src="images/gitlab.png" alt="#" />
+                <img src="images/gitlab.avif" alt="#" />
                 <div className="skill-overlay">⭐⭐⭐</div>
               </div>
               <div className="skill-item">
-                <img src="images/github.png" alt="#" />
+                <img src="images/github.avif" alt="#" />
                 <div className="skill-overlay">⭐</div>
               </div>
             </div>

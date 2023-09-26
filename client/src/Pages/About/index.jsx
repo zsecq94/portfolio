@@ -26,7 +26,7 @@ const About = ({ goToSlide }) => {
       <div className="about-wrapper">
         <div className="about-img">
           <img
-            src="images/profile.jpg"
+            src="images/profile.avif"
             alt=""
             style={{
               width: "80%",
@@ -89,9 +89,9 @@ const About = ({ goToSlide }) => {
             >
               Git
             </a>
-            <a onClick={() => goToSlide(3)} href="#">
+            <span className="span1" onClick={() => goToSlide(3)}>
               Contact
-            </a>
+            </span>
           </div>
         </div>
       </div>

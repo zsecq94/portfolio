@@ -61,9 +61,9 @@ const Contact = () => {
         </div>
         <div style={{ display: "flex", gap: "2rem", marginTop: "50px" }}>
           <img
-            src="images/send.png"
+            src="images/send.avif"
             alt=""
-            style={{ width: "400px", height: "410px", borderRadius: "5px" }}
+            style={{ width: "450px", height: "450px", borderRadius: "5px" }}
           />
           <div className="contact-wrapper">
             <div style={{ display: "flex" }}>
@@ -88,8 +88,13 @@ const Contact = () => {
         </div>
       </div>
       <div className="footer">
-        <a href="https://github.com/zsecq94" target="_blank" rel="noreferrer">
-          <img src="images/giticon.png" alt="" style={{ width: "50px" }} />
+        <a
+          href="https://github.com/zsecq94"
+          target="_blank"
+          rel="noreferrer"
+          aria-label="go github"
+        >
+          <img src="images/giticon.avif" alt="" style={{ width: "50px" }} />
         </a>
         <h5>© 2023. Bae Joong Kwon. All rights reserved.</h5>
       </div>

@@ -48,21 +48,25 @@ const Modal = ({ toggleModal, modalOpen, checkModalNum }) => {
         <br />
         <div>
           <h4 style={{ marginBottom: "10px" }}>❕ Role</h4>
-          {V?.role.map((C, index) => (
-            <li
-              key={index}
-              style={index === 0 ? { color: "red", fontWeight: "bold" } : {}}
-            >
-              {C}
-            </li>
-          ))}
+          <ul>
+            {V?.role.map((C, index) => (
+              <li
+                key={index}
+                style={index === 0 ? { color: "red", fontWeight: "bold" } : {}}
+              >
+                {C}
+              </li>
+            ))}
+          </ul>
         </div>
         <br />
         <div>
           <h4 style={{ marginBottom: "10px" }}>📜 Technology Stack</h4>
-          <li>{V?.fe}</li>
-          {V?.be && <li>{V.be}</li>}
-          {V?.de && <li>{V.de}</li>}
+          <ul>
+            <li>{V?.fe}</li>
+          </ul>
+          <ul>{V?.be && <li>{V.be}</li>}</ul>
+          <ul>{V?.de && <li>{V.de}</li>}</ul>
         </div>
         <br />
         <div className="function">
@@ -80,9 +84,9 @@ const Modal = ({ toggleModal, modalOpen, checkModalNum }) => {
           </div>
           {V?.function.map((C, index) => (
             <div className="img-content">
-              <li key={index} style={{ fontWeight: "bold" }}>
-                {C}
-              </li>
+              <span key={index} style={{ fontWeight: "bold" }}>
+                # {C}
+              </span>
               <img
                 style={{ width: "100%", margin: "10px 0" }}
                 src={`./images/Modal/pjt${V?.img}/${index + 1}.gif`}
@@ -113,11 +117,11 @@ const Modal = ({ toggleModal, modalOpen, checkModalNum }) => {
           ))}
         </div>
         <h4 style={{ marginBottom: "10px" }}>🔑 Result</h4>
-        {V?.result.map((C, index) => (
-          <div>
+        <ul>
+          {V?.result.map((C, index) => (
             <li>{C}</li>
-          </div>
-        ))}
+          ))}
+        </ul>
         <br />
         <h4 style={{ marginBottom: "10px" }}>⚙️ Getting Started</h4>
         <CodeBlock num={V?.img} />

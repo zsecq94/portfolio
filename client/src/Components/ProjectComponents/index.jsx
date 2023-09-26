@@ -105,10 +105,15 @@ const ProjectComponents = ({ swiperRef, V, toggleModal }) => {
             </div>
           </div>
           <div className="pjt-footer">
-            <a href={V.git} target="_blank" rel="noreferrer">
+            <a
+              href={V.git}
+              target="_blank"
+              rel="noreferrer"
+              aria-label="go github"
+            >
               <img
                 className="img1"
-                src="images/giticon.png"
+                src="images/giticon.avif"
                 alt=""
                 style={{ width: "50px" }}
               />
