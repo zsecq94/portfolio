@@ -64,7 +64,7 @@ const About = ({ goToSlide }) => {
             </div>
           </div>
           <hr style={{ margin: "10px 0 10px 0" }} />
-          <span style={{ color: "gray", fontSize: "1.2rem" }}>
+          <span style={{ color: "gray" }}>
             제 주된 관심사는 프론트엔드(FE) 개발의 디테일입니다. 프로젝트를
             수행할 때 UI/UX 디자인과 웹 접근성을 고려하여 사용자 경험을
             향상시키는 데 주력하였으며, 피그마로 제작한 시안을 실제 개발 환경에
@@ -73,7 +73,7 @@ const About = ({ goToSlide }) => {
             사용자들의 피드백을 수집하고 분석하여 UI/UX를 개선하는 작업에
             주력하고자 합니다.
           </span>
-          <span style={{ color: "gray", fontSize: "1.2rem" }}>
+          <span style={{ color: "gray" }}>
             앞으로는 Three.js, Canvas, WebGL 등과 같은 디자인 관련 기술을 꾸준히
             학습하여 숙달하고자 하며, 이러한 기술을 UI/UX 디자인과 연계하여
             사용자 친화적인 인터페이스를 구현하는 능력을 향상시키고 싶습니다.

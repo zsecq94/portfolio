@@ -20,6 +20,12 @@
       color: black;
     }
   }
+  @media (max-height: 900px) {
+    .mySwiper {
+      width: 18%;
+    }
+  }
+
   @media (max-width: 1680px) {
     .mySwiper {
       width: 40%;

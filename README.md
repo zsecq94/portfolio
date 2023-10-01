@@ -14,20 +14,14 @@ React와 Javascript, 그리고 다양한 라이브러리와 도구들(Swiper, Sa
 
 firebase의 hosting 서비스를 활용하여 프로젝트 배포 과정도 경험해보았습니다. 이는 실제 서비스 배포 과정을 체계적으로 이해하고 경험하기 위함이었습니다.  
 
-
-
 #### ❕ Role
 
 - Front-End & Deploy : 1명
-
-
 
 #### 📜 Technology Stack
 
 - Front-End : JavaScript, React, Toastify, Swiper, Sass, styled-components
 - Deploy : Firebase
-
-
 
 #### 🔨 Main Function
 
@@ -39,15 +33,11 @@ Swiper를 적극적으로 활용하여 사용자 경험을 향상시키는데 �
 
 전체적으로 레이아웃 구성을 깔끔하게 가져가기 위해 노력했습니다. 영역의 넓이나, 마진, 패팅 등 재사용 가능한 컴포넌트를 활용하여 일관되게 구현했습니다. 또한, 버튼이나 클릭 요소들에 transtion 효과를 줘서 사용자가 이벤트 효과를 자연스럽게 느낄 수 있도록 구현했습니다.
 
-
-
 - About
 
 ![](https://jk-portfolio1.web.app/images/Modal/pjt5/2.gif)  
 
 다른 사람들의 다양한 포트폴리오 About me 부분을 확인해 보고, 가장 표준적인 방법으로 About me 를 구성했습니다. 간단한 소개글과, 저에 대한 정보를 확인할 수 있습니다.
-
-
 
 - Skills
 
@@ -55,23 +45,17 @@ Swiper를 적극적으로 활용하여 사용자 경험을 향상시키는데 �
 
 사용해본 Skill들을 모두 나열했습니다. 마우스 호버시 프로젝트 수행 횟수에 대해 알 수 있습니다.
 
-
-
 - Projects
 
 <img src="https://jk-portfolio1.web.app/images/Modal/pjt5/4.gif" title="" alt="" width="746">  
 
 Swiper를 활용해서 프로젝트 컴포넌트를 구성했습니다. 메인 컨텐츠는 재사용 가능한 컴포넌트를 만들어서 사용했고, 그 안의 작은 요소들도 역시, 재사용 가능한 컴포넌트를 만들어서 구현했습니다.
 
-
-
 - Contact
 
 ![](https://jk-portfolio1.web.app/images/Modal/pjt5/5.gif)  
 
 Contact는 emailjs를 활용해서 메일 보내기 기능을 만들었고, 비교 연산자를 통해 작성해야되는 칸이 비어있지 않은지 유효성 검사를 진행하고 통과 됐을때, 이메일을 전송합니다.
-
-
 
 ---
 
@@ -85,13 +69,9 @@ Contact는 emailjs를 활용해서 메일 보내기 기능을 만들었고, 비�
 
 처음에는 FE와 BE 모두 구성하여 AWS서버를 구매해 배포할 생각을가지고 있었지만, 프로젝트의 볼륨이 생각보다 크지 않고, 빠르고손쉽게 배포할 수 있는 방법을 알게되어 프로젝트의 볼륨에 맞춰Firebase의 호스팅 서비스를 사용하여 정적 웹사이트를 배포했습니다.  
 
-
-
 #### 🔑 Result
 
 - 디자인에 대해 많은 공부를 할 수 있었습니다. 혼자서 진행하다 보니자유롭게 원하는 대로 구현할 수 있는 장점도 있었지만, 디자인 요소를추가할 때마다 상당한 시간이 소요되었습니다. 구글링을 통해 다양한아이디어와 기술을 습득하며, 디자인에 대한 시야도 확장할 수 있었다고생각합니다.
-
-
 
 #### ⚙️ Getting Started
 
@@ -102,5 +82,3 @@ Contact는 emailjs를 활용해서 메일 보내기 기능을 만들었고, 비�
 ```
 
 ---
-
-

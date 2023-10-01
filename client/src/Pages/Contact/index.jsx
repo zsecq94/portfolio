@@ -60,11 +60,7 @@ const Contact = () => {
           <h2>✔ CONTACT</h2>
         </div>
         <div style={{ display: "flex", gap: "2rem", marginTop: "50px" }}>
-          <img
-            src="images/send.avif"
-            alt=""
-            style={{ width: "450px", height: "450px", borderRadius: "5px" }}
-          />
+          <img src="images/send.avif" alt="" />
           <div className="contact-wrapper">
             <div style={{ display: "flex" }}>
               <form ref={form}>
