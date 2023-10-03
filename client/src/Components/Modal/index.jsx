@@ -3,8 +3,12 @@ import data from "./data.json";
 import CodeBlock from "../CodeBlock";
 
 import "./Modal.scss";
+import { useRecoilState } from "recoil";
+import { checkModalNumState, modalOpenState } from "../../Recoil/Store";
 
-const Modal = ({ toggleModal, modalOpen, checkModalNum }) => {
+const Modal = ({ toggleModal }) => {
+  const [modalOpen, setModalOpen] = useRecoilState(modalOpenState);
+  const [checkModalNum, setCheckModalNum] = useRecoilState(checkModalNumState);
   const V = data[checkModalNum - 1];
   const goToScroll = (name) => {
     var element = document.querySelector("." + name);
@@ -13,7 +17,7 @@ const Modal = ({ toggleModal, modalOpen, checkModalNum }) => {
   };
 
   return (
-    <div className={`modal-wrapper ${modalOpen ? "open" : ""}`}>
+    <div className={`modal-wrapper ${modalOpen ? "open" : undefined}`}>
       <div className="modal-header">
         <h3>💾 {V?.name}.md</h3>
         <div className="modal-header-menu">
@@ -39,7 +43,7 @@ const Modal = ({ toggleModal, modalOpen, checkModalNum }) => {
           <br />
           <br />
           {V?.background.map((value, index) => (
-            <div>
+            <div key={index}>
               <span>{value}</span>
               <br />
             </div>
@@ -83,18 +87,19 @@ const Modal = ({ toggleModal, modalOpen, checkModalNum }) => {
             </h6>
           </div>
           {V?.function.map((C, index) => (
-            <div className="img-content">
-              <span key={index} style={{ fontWeight: "bold" }}>
-                # {C}
-              </span>
+            <div key={index} className="img-content">
+              <span style={{ fontWeight: "bold" }}># {C}</span>
               <img
                 style={{ width: "100%", margin: "10px 0" }}
                 src={`./images/Modal/pjt${V?.img}/${index + 1}.gif`}
                 alt=""
               />
               <br />
-              {V?.function2[index].split("////").map((a) => (
-                <div style={{ wordWrap: "break-word", marginBottom: "10px" }}>
+              {V?.function2[index].split("////").map((a, index) => (
+                <div
+                  key={index}
+                  style={{ wordWrap: "break-word", marginBottom: "10px" }}
+                >
                   <span>{a}</span>
                 </div>
               ))}
@@ -108,7 +113,7 @@ const Modal = ({ toggleModal, modalOpen, checkModalNum }) => {
         <div className="learned">
           <h4 style={{ marginBottom: "10px" }}>🚩 Learned</h4>
           {V?.title.map((C, index) => (
-            <div>
+            <div key={index}>
               <h5 style={{ fontSize: "1rem" }}>{C}</h5>
               <span>{V.learned[index]}</span>
               <br />
@@ -119,7 +124,7 @@ const Modal = ({ toggleModal, modalOpen, checkModalNum }) => {
         <h4 style={{ marginBottom: "10px" }}>🔑 Result</h4>
         <ul>
           {V?.result.map((C, index) => (
-            <li>{C}</li>
+            <li key={index}>{C}</li>
           ))}
         </ul>
         <br />

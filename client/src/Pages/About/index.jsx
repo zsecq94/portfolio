@@ -57,8 +57,8 @@ const About = ({ goToSlide }) => {
               <span>zsecq94@gmail.com</span>
               <span>삼성 청년 SW 아카데미 8기 수료</span>
               <div className="main-skills">
-                {skillList.map((skill) => (
-                  <Skills skill={skill} />
+                {skillList.map((skill, index) => (
+                  <Skills key={index} skill={skill} />
                 ))}
               </div>
             </div>

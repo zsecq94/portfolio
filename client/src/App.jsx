@@ -12,9 +12,19 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Mousewheel } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
+import { useRecoilState } from "recoil";
+import {
+  activeIndexState,
+  checkModalNumState,
+  menuOpenState,
+  modalOpenState,
+} from "./Recoil/Store";
 
 function App() {
-  const [activeIndex, setActiveIndex] = useState(0);
+  const [activeIndex, setActiveIndex] = useRecoilState(activeIndexState);
+  const [menuOpen, setMenuOpen] = useRecoilState(menuOpenState);
+  const [modalOpen, setModalOpen] = useRecoilState(modalOpenState);
+  const [checkModalNum, setCheckModalNum] = useRecoilState(checkModalNumState);
   const swiperRef = useRef(null);
 
   const handleHeaderChange = (swiper) => {
@@ -32,10 +42,6 @@ function App() {
     window.scrollTo({ top: location, behavior: "smooth" });
   };
 
-  const [menuOpen, setMenuOpen] = useState(false);
-  const [modalOpen, setModalOpen] = useState(false);
-  const [checkModalNum, setCheckModalNum] = useState(0);
-
   const toggleModal = (num) => {
     setModalOpen(!modalOpen);
     setCheckModalNum(num);
@@ -50,13 +56,9 @@ function App() {
 
   return (
     <div className="app-wrapper">
-      <Modal
-        toggleModal={toggleModal}
-        modalOpen={modalOpen}
-        checkModalNum={checkModalNum}
-      />
+      <Modal toggleModal={toggleModal} />
       <div className="main-wrapper">
-        <Header goToSlide={goToSlide} activeIndex={activeIndex} />
+        <Header goToSlide={goToSlide} />
         <Swiper
           ref={swiperRef}
           speed={1500}
@@ -90,12 +92,7 @@ function App() {
         </Swiper>
       </div>
       <div className="mobile-wrapper">
-        <Header
-          menuOpen={menuOpen}
-          toggleMenu={toggleMenu}
-          goToSlide={goToSlide}
-          activeIndex={activeIndex}
-        />
+        <Header toggleMenu={toggleMenu} goToSlide={goToSlide} />
         <div className="about">
           <About />
         </div>

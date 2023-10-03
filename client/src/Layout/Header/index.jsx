@@ -2,8 +2,12 @@ import React from "react";
 import styled from "styled-components";
 
 import "./Header.scss";
+import { useRecoilState } from "recoil";
+import { activeIndexState, menuOpenState } from "../../Recoil/Store";
 
-const Header = ({ menuOpen, toggleMenu, goToSlide, activeIndex }) => {
+const Header = ({ toggleMenu, goToSlide }) => {
+  const [menuOpen, setMenuOpen] = useRecoilState(menuOpenState);
+  const [activeIndex, setActiveIndex] = useRecoilState(activeIndexState);
   return (
     <div className="header">
       <div className="header-wrapper">
@@ -15,25 +19,25 @@ const Header = ({ menuOpen, toggleMenu, goToSlide, activeIndex }) => {
         <div className="header-menu">
           <h3
             onClick={() => goToSlide(0)}
-            className={activeIndex === 0 && "Menu-selected"}
+            className={activeIndex === 0 ? "Menu-selected" : undefined}
           >
             About
           </h3>
           <h3
             onClick={() => goToSlide(1)}
-            className={activeIndex === 1 && "Menu-selected"}
+            className={activeIndex === 1 ? "Menu-selected" : undefined}
           >
             Skills
           </h3>
           <h3
             onClick={() => goToSlide(2)}
-            className={activeIndex === 2 && "Menu-selected"}
+            className={activeIndex === 2 ? "Menu-selected" : undefined}
           >
             Projects
           </h3>
           <h3
             onClick={() => goToSlide(3)}
-            className={activeIndex === 3 && "Menu-selected"}
+            className={activeIndex === 3 ? "Menu-selected" : undefined}
           >
             Contact
           </h3>
@@ -42,12 +46,12 @@ const Header = ({ menuOpen, toggleMenu, goToSlide, activeIndex }) => {
       <div className="mobile-wrapper">
         <div className="mobile-wrapper2">
           <div className="mobile-btn" onClick={toggleMenu}>
-            <span className={`bar ${menuOpen ? "active" : ""}`}></span>
-            <span className={`bar ${menuOpen ? "active" : ""}`}></span>
-            <span className={`bar ${menuOpen ? "active" : ""}`}></span>
+            <span className={`bar ${menuOpen ? "active" : undefined}`}></span>
+            <span className={`bar ${menuOpen ? "active" : undefined}`}></span>
+            <span className={`bar ${menuOpen ? "active" : undefined}`}></span>
           </div>
 
-          <MenuContainer className={menuOpen ? "show" : ""}>
+          <MenuContainer className={menuOpen ? "show" : undefined}>
             <h2
               onClick={() => {
                 window.location.reload();

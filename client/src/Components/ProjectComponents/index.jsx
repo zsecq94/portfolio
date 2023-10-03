@@ -62,7 +62,9 @@ const ProjectComponents = ({ swiperRef, V, toggleModal }) => {
                 key={index}
                 src={url}
                 alt="#"
-                className={`subimg ${mainImgUrl === url ? "selected" : ""}`}
+                className={`subimg ${
+                  mainImgUrl === url ? "selected" : undefined
+                }`}
                 onClick={() => changeImg(url)}
               />
             ))}
@@ -91,13 +93,13 @@ const ProjectComponents = ({ swiperRef, V, toggleModal }) => {
               }}
             >
               <div className="fe-skills">
-                {V.fe.map((skill) => (
-                  <Skills skill={skill} />
+                {V.fe.map((skill, index) => (
+                  <Skills key={index} skill={skill} />
                 ))}
               </div>
               <div className="be-skills">
-                {V.be.map((skill) => (
-                  <Skills skill={skill} />
+                {V.be.map((skill, index) => (
+                  <Skills key={index} skill={skill} />
                 ))}
               </div>
               <span>{V.role}</span>

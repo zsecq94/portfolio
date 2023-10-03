@@ -32,9 +32,8 @@ const Project = ({ swiperRef, toggleModal }) => {
         modules={[Navigation]}
       >
         {data.map((V, index) => (
-          <SwiperSlide>
+          <SwiperSlide key={index}>
             <ProjectComponents
-              key={index}
               V={V}
               swiperRef={swiperRef}
               toggleModal={toggleModal}
