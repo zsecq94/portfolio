@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useRef } from "react";
 import Header from "./Layout/Header";
 import About from "./Pages/About";
 import Skills from "./Pages/Skills";
@@ -12,23 +12,20 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Mousewheel } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
-import { useRecoilState } from "recoil";
-import {
-  activeIndexState,
-  checkModalNumState,
-  menuOpenState,
-  modalOpenState,
-} from "./Recoil/Store";
+
+import { useStateStore } from "./Store/useStateStore";
+
+export const goToScroll = (name) => {
+  var location = document.querySelector("." + name).offsetTop;
+  window.scrollTo({ top: location, behavior: "smooth" });
+};
 
 function App() {
-  const [activeIndex, setActiveIndex] = useRecoilState(activeIndexState);
-  const [menuOpen, setMenuOpen] = useRecoilState(menuOpenState);
-  const [modalOpen, setModalOpen] = useRecoilState(modalOpenState);
-  const [checkModalNum, setCheckModalNum] = useRecoilState(checkModalNumState);
   const swiperRef = useRef(null);
+  const { handleActiveIndex } = useStateStore();
 
   const handleHeaderChange = (swiper) => {
-    setActiveIndex(swiper.activeIndex);
+    handleActiveIndex(swiper.activeIndex);
   };
 
   const goToSlide = (slideIndex) => {
@@ -37,26 +34,9 @@ function App() {
     }
   };
 
-  const goToScroll = (name) => {
-    var location = document.querySelector("." + name).offsetTop;
-    window.scrollTo({ top: location, behavior: "smooth" });
-  };
-
-  const toggleModal = (num) => {
-    setModalOpen(!modalOpen);
-    setCheckModalNum(num);
-  };
-
-  const toggleMenu = (name) => {
-    setMenuOpen(!menuOpen);
-    if (name?.length >= 1) {
-      goToScroll(name);
-    }
-  };
-
   return (
     <div className="app-wrapper">
-      <Modal toggleModal={toggleModal} />
+      <Modal />
       <div className="main-wrapper">
         <Header goToSlide={goToSlide} />
         <Swiper
@@ -84,7 +64,7 @@ function App() {
             <Skills />
           </SwiperSlide>
           <SwiperSlide>
-            <Project swiperRef={swiperRef} toggleModal={toggleModal} />
+            <Project swiperRef={swiperRef} />
           </SwiperSlide>
           <SwiperSlide>
             <Contact />
@@ -92,7 +72,7 @@ function App() {
         </Swiper>
       </div>
       <div className="mobile-wrapper">
-        <Header toggleMenu={toggleMenu} goToSlide={goToSlide} />
+        <Header goToSlide={goToSlide} />
         <div className="about">
           <About />
         </div>
@@ -100,7 +80,7 @@ function App() {
           <Skills />
         </div>
         <div className="projects">
-          <Project swiperRef={swiperRef} toggleModal={toggleModal} />
+          <Project swiperRef={swiperRef} />
         </div>
         <div className="contact">
           <Contact />

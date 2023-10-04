@@ -3,13 +3,11 @@ import data from "./data.json";
 import CodeBlock from "../CodeBlock";
 
 import "./Modal.scss";
-import { useRecoilState } from "recoil";
-import { checkModalNumState, modalOpenState } from "../../Recoil/Store";
+import { useStateStore } from "../../Store/useStateStore";
 
-const Modal = ({ toggleModal }) => {
-  const [modalOpen, setModalOpen] = useRecoilState(modalOpenState);
-  const [checkModalNum, setCheckModalNum] = useRecoilState(checkModalNumState);
-  const V = data[checkModalNum - 1];
+const Modal = () => {
+  const { modalOpenState, checkModalNumState, toggleModal } = useStateStore();
+  const V = data[checkModalNumState - 1];
   const goToScroll = (name) => {
     var element = document.querySelector("." + name);
     var modalWrapper = document.querySelector(".modal-wrapper");
@@ -17,7 +15,7 @@ const Modal = ({ toggleModal }) => {
   };
 
   return (
-    <div className={`modal-wrapper ${modalOpen ? "open" : undefined}`}>
+    <div className={`modal-wrapper ${modalOpenState ? "open" : undefined}`}>
       <div className="modal-header">
         <h3>💾 {V?.name}.md</h3>
         <div className="modal-header-menu">

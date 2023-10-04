@@ -9,7 +9,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation } from "swiper";
 
-const Project = ({ swiperRef, toggleModal }) => {
+const Project = ({ swiperRef }) => {
   return (
     <div className="project-wrapper">
       <div
@@ -33,11 +33,7 @@ const Project = ({ swiperRef, toggleModal }) => {
       >
         {data.map((V, index) => (
           <SwiperSlide key={index}>
-            <ProjectComponents
-              V={V}
-              swiperRef={swiperRef}
-              toggleModal={toggleModal}
-            />
+            <ProjectComponents V={V} swiperRef={swiperRef} />
           </SwiperSlide>
         ))}
         <div className="swiper-button-next"></div>

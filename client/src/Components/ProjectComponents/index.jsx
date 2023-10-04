@@ -3,7 +3,10 @@ import React, { useEffect, useState } from "react";
 import Skills from "../Skills";
 import "./ProjectComponents.scss";
 
-const ProjectComponents = ({ swiperRef, V, toggleModal }) => {
+import { useStateStore } from "../../Store/useStateStore";
+
+const ProjectComponents = ({ swiperRef, V }) => {
+  const { toggleModal } = useStateStore();
   const [mainImgUrl, setMainImgUrl] = useState(
     `/images/projects/pjt${V.img}/1.gif`
   );
