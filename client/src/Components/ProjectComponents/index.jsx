@@ -56,7 +56,7 @@ const ProjectComponents = ({ swiperRef, V }) => {
       <hr className="top-hr" />
       <div className="pjt1-wrapper">
         <div className="img-wrapper">
-          <img src={mainImgUrl} alt="#" />
+          <img className="main-img" src={mainImgUrl} alt="#" />
           <h4>{imgName}</h4>
           <hr />
           <div style={{ display: "flex" }}>
@@ -73,7 +73,7 @@ const ProjectComponents = ({ swiperRef, V }) => {
             ))}
           </div>
           <hr />
-          <div style={{ display: "flex", width: "100%" }}>
+          <div className="bottom">
             <div
               style={{
                 display: "flex",

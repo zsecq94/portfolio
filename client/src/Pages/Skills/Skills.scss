@@ -10,6 +10,10 @@ $backgroundColor: white;
   width: 100%;
   height: 100%;
   gap: 2rem;
+  .pjt-num {
+    margin-top: 1rem;
+    color: gray;
+  }
   .skills-main1 {
     display: flex;
     width: 100%;
@@ -36,7 +40,16 @@ $backgroundColor: white;
     }
   }
 
-  @media (max-height: 900px) {
+  @media (max-height: 700px) {
+    .name {
+      font-size: 0.5rem;
+    }
+    .pjt-num {
+      display: none;
+    }
+    .skill-overlay {
+      font-size: 0.5rem;
+    }
     .skills-main1 {
       width: 70%;
     }

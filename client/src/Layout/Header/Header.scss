@@ -108,3 +108,16 @@
     }
   }
 }
+
+@media (max-height: 700px) {
+  .header {
+    height: 35px;
+    .header-wrapper {
+      .header-title {
+        .Title {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+}

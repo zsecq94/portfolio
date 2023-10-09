@@ -13,6 +13,14 @@
     width: 55%;
     height: 60%;
     gap: 2rem;
+    .span2 {
+      color: white;
+    }
+    @media (max-height: 700px) {
+      .span2 {
+        font-size: 0.8rem;
+      }
+    }
     .about-img {
       width: 35%;
       display: flex;
@@ -43,7 +51,7 @@
           flex-direction: column;
           font-weight: bold;
           gap: 0.1rem;
-          @media (max-height: 900px) {
+          @media (max-height: 700px) {
             span {
               font-size: 0.8rem;
             }
@@ -54,7 +62,7 @@
           flex-direction: column;
           color: "white";
           gap: 0.1rem;
-          @media (max-height: 900px) {
+          @media (max-height: 700px) {
             span {
               font-size: 0.8rem;
             }
@@ -132,5 +140,11 @@
         }
       }
     }
+  }
+}
+
+@media (max-height: 700px) {
+  .about {
+    gap: 2rem;
   }
 }

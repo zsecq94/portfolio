@@ -20,7 +20,7 @@
       color: black;
     }
   }
-  @media (max-height: 900px) {
+  @media (max-height: 700px) {
     .mySwiper {
       width: 18%;
     }
@@ -47,4 +47,6 @@
       }
     }
   }
+}
+@media (max-height: 700px) {
 }

@@ -6,6 +6,10 @@
   display: flex;
   flex-direction: column;
   text-align: center;
+  .bottom {
+    display: flex;
+    width: 100%;
+  }
   .top-hr {
     margin: 0% 4%;
   }
@@ -100,6 +104,21 @@
         span {
           text-align: left;
           font-size: 0.7rem;
+        }
+      }
+    }
+  }
+}
+@media (max-height: 700px) {
+  .pjt {
+    .pjt1-wrapper {
+      .img-wrapper {
+        gap: 0.1rem;
+        .main-img {
+          height: 50%;
+        }
+        .bottom {
+          display: none;
         }
       }
     }

@@ -20,13 +20,11 @@ const Skills = () => {
         >
           ✔ SKILLS
         </h2>
-        <h5 style={{ marginTop: "1rem", color: "gray" }}>
-          ⭐ : 프로젝트 수행 횟수
-        </h5>
+        <h5 className="pjt-num">⭐ : 프로젝트 수행 횟수</h5>
       </div>
       <div className="skills-main1">
         <div className="skills-one">
-          <h4>Frontend</h4>
+          <h4 className="name">Frontend</h4>
           <hr />
           <div
             style={{
@@ -76,7 +74,7 @@ const Skills = () => {
         </div>
         <div className="skills-two">
           <div className="two">
-            <h4>Backend</h4>
+            <h4 className="name">Backend</h4>
             <hr />
             <div
               style={{
@@ -105,7 +103,7 @@ const Skills = () => {
             </div>
           </div>
           <div className="two">
-            <h4>DB</h4>
+            <h4 className="name">DB</h4>
             <hr />
             <div
               style={{
@@ -128,7 +126,7 @@ const Skills = () => {
         </div>
         <div className="skills-two">
           <div className="two">
-            <h4>Chart</h4>
+            <h4 className="name">Chart</h4>
             <hr />
             <div style={{ display: "flex", gap: "0.5rem", marginTop: "10px" }}>
               <div className="skill-item" style={{ width: "50%" }}>
@@ -152,7 +150,7 @@ const Skills = () => {
             </div>
           </div>
           <div className="two">
-            <h4>Communication</h4>
+            <h4 className="name">Communication</h4>
             <hr />
             <div
               style={{
@@ -183,7 +181,7 @@ const Skills = () => {
         </div>
         <div className="skills-two">
           <div className="two">
-            <h4>Version Control</h4>
+            <h4 className="name">Version Control</h4>
             <hr />
             <div
               style={{

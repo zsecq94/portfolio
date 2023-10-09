@@ -6,6 +6,7 @@ export const useStateStore = create((set) => ({
   modalOpenState: false,
   checkModalNumState: 0,
   activeIndexState: 0,
+  //////////////////////////////////////////////
   toggleModal: (num) =>
     set((state) => {
       return {
