@@ -43,7 +43,6 @@ const About = ({ goToSlide }) => {
             <div className="title">
               <span>NAME.</span>
               <span>BIRTH.</span>
-              <span>ADDRESS.</span>
               <span>CONTACT.</span>
               <span>EMAIL.</span>
               <span>EDUCATION.</span>
@@ -52,7 +51,6 @@ const About = ({ goToSlide }) => {
             <div className="detail">
               <span>배 중 권</span>
               <span>94.10.03</span>
-              <span>전라남도 나주시</span>
               <span>010-2556-8761</span>
               <span>zsecq94@gmail.com</span>
               <span>삼성 청년 SW 아카데미 8기 수료</span>
